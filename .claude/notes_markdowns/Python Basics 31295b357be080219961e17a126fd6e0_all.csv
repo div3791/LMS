@@ -1,0 +1,22 @@
+﻿Topic,Category,Difficulty,Notes,Priority,Resources,Status
+Basics,,,,,,Completed
+Functions,,,,,,Completed
+Scope & Closure,,,,,,Completed
+Mutable vs Immutable,,,,,,Completed
+Call Stack & Recursion,,,,,,Completed
+Iterators & Generators,,,,,,Completed
+"Lambda Functions ",,,,,,Completed
+Iterable vs Iterator vs Generator,,,,,,Completed
+Loops,,,,,,Completed
+Conditional Statements (if / elif / else),,,,,,Completed
+Exception handling,,,,,,Completed
+Higher Order Functions,,,,,,Completed
+Operators,,,,,,Completed
+Lists,,,,,,Completed
+Advanced List,,,,,,Completed
+Tuple,,,,,,Completed
+Set,,,,,,Completed
+Dictionary,,,,,,Completed
+Collection Module,,,,,,Completed
+Decorators,,,,,,Completed
+Context Manager,,,,,,Completed
