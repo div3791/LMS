@@ -4,13 +4,13 @@ import {
 } from '../../components/notes'
 
 const C = {
-  for_c:  '#4F8CFF',
-  while_c:'#F59E0B',
-  break_c:'#F87171',
+  for_c: '#4F8CFF',
+  while_c: '#F59E0B',
+  break_c: '#F87171',
   cont_c: '#A78BFA',
   else_c: '#34D399',
-  muted:  '#8B949E',
-  dim:    '#2D333B',
+  muted: '#8B949E',
+  dim: '#2D333B',
 }
 
 // ─────────────────────────────────────────────────────────
@@ -29,17 +29,17 @@ function ForLoopSVG() {
           .fl4{animation:flFade .3s .48s ease both}
         `}</style>
         <marker id="flArr" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
-          <path d="M0,0 L0,7 L7,3.5 z" fill={C.muted}/>
+          <path d="M0,0 L0,7 L7,3.5 z" fill={C.muted} />
         </marker>
         <marker id="flBlue" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
-          <path d="M0,0 L0,7 L7,3.5 z" fill={C.for_c}/>
+          <path d="M0,0 L0,7 L7,3.5 z" fill={C.for_c} />
         </marker>
       </defs>
 
       {/* Step 1: iter() */}
       <g className="fl0">
         <rect x="10" y="10" width="110" height="44" rx="8"
-          fill={C.for_c} fillOpacity=".12" stroke={C.for_c} strokeOpacity=".5" strokeWidth="1.5"/>
+          fill={C.for_c} fillOpacity=".12" stroke={C.for_c} strokeOpacity=".5" strokeWidth="1.5" />
         <text x="65" y="28" textAnchor="middle" fontSize="9" fontWeight="700"
           fill={C.for_c} fontFamily="Poppins,sans-serif">iterable</text>
         <text x="65" y="44" textAnchor="middle" fontSize="8" fill={C.muted}
@@ -48,12 +48,12 @@ function ForLoopSVG() {
 
       <g className="fl1">
         <line x1="120" y1="32" x2="178" y2="32"
-          stroke={C.for_c} strokeWidth="1.8" markerEnd="url(#flBlue)"/>
+          stroke={C.for_c} strokeWidth="1.8" markerEnd="url(#flBlue)" />
         <text x="149" y="27" textAnchor="middle" fontSize="8" fill={C.for_c}
           fontFamily="Poppins,sans-serif">iter()</text>
 
         <rect x="180" y="10" width="110" height="44" rx="8"
-          fill={C.for_c} fillOpacity=".08" stroke={C.for_c} strokeOpacity=".4" strokeWidth="1.5"/>
+          fill={C.for_c} fillOpacity=".08" stroke={C.for_c} strokeOpacity=".4" strokeWidth="1.5" />
         <text x="235" y="28" textAnchor="middle" fontSize="9" fontWeight="700"
           fill={C.for_c} fontFamily="Poppins,sans-serif">iterator</text>
         <text x="235" y="44" textAnchor="middle" fontSize="8" fill={C.muted}
@@ -63,12 +63,12 @@ function ForLoopSVG() {
       {/* next() loop */}
       <g className="fl2">
         <line x1="290" y1="32" x2="348" y2="32"
-          stroke={C.for_c} strokeWidth="1.8" markerEnd="url(#flBlue)"/>
+          stroke={C.for_c} strokeWidth="1.8" markerEnd="url(#flBlue)" />
         <text x="319" y="27" textAnchor="middle" fontSize="8" fill={C.for_c}
           fontFamily="Poppins,sans-serif">next()</text>
 
         <rect x="350" y="10" width="120" height="44" rx="8"
-          fill={C.else_c} fillOpacity=".1" stroke={C.else_c} strokeOpacity=".4" strokeWidth="1.5"/>
+          fill={C.else_c} fillOpacity=".1" stroke={C.else_c} strokeOpacity=".4" strokeWidth="1.5" />
         <text x="410" y="28" textAnchor="middle" fontSize="9" fontWeight="700"
           fill={C.else_c} fontFamily="Poppins,sans-serif">body runs</text>
         <text x="410" y="44" textAnchor="middle" fontSize="8" fill={C.muted}
@@ -78,10 +78,10 @@ function ForLoopSVG() {
       {/* StopIteration */}
       <g className="fl3">
         <line x1="410" y1="54" x2="410" y2="90"
-          stroke={C.muted} strokeWidth="1.5" markerEnd="url(#flArr)"/>
+          stroke={C.muted} strokeWidth="1.5" markerEnd="url(#flArr)" />
 
         <rect x="350" y="92" width="120" height="44" rx="8"
-          fill={C.break_c} fillOpacity=".1" stroke={C.break_c} strokeOpacity=".4" strokeWidth="1.5"/>
+          fill={C.break_c} fillOpacity=".1" stroke={C.break_c} strokeOpacity=".4" strokeWidth="1.5" />
         <text x="410" y="110" textAnchor="middle" fontSize="9" fontWeight="700"
           fill={C.break_c} fontFamily="Poppins,sans-serif">StopIteration</text>
         <text x="410" y="126" textAnchor="middle" fontSize="8" fill={C.muted}
@@ -90,14 +90,14 @@ function ForLoopSVG() {
         {/* Loop back arrow */}
         <path d="M290 32 Q290 148 235 148 Q180 148 180 116 L180 54"
           stroke={C.muted} strokeWidth="1.5" fill="none" strokeDasharray="4 3"
-          markerEnd="url(#flArr)"/>
+          markerEnd="url(#flArr)" />
         <text x="220" y="160" textAnchor="middle" fontSize="8" fill={C.muted}
           fontFamily="Open Sans,sans-serif">repeat until done</text>
       </g>
 
       <g className="fl4">
         <rect x="8" y="130" width="330" height="42" rx="8"
-          fill={C.dim} fillOpacity=".5" stroke={C.muted} strokeOpacity=".2" strokeWidth="1"/>
+          fill={C.dim} fillOpacity=".5" stroke={C.muted} strokeOpacity=".2" strokeWidth="1" />
         <text x="173" y="148" textAnchor="middle" fontSize="8.5" fontFamily="Space Mono,monospace"
           fill="#E6EDF3">for x in [1,2,3]:  →  it=iter([1,2,3])</text>
         <text x="173" y="164" textAnchor="middle" fontSize="8.5" fontFamily="Space Mono,monospace"
@@ -119,19 +119,19 @@ function BreakContinueSVG() {
           .bc{animation:bcFade .4s .1s ease both}
         `}</style>
         <marker id="bcRed" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
-          <path d="M0,0 L0,7 L7,3.5 z" fill={C.break_c}/>
+          <path d="M0,0 L0,7 L7,3.5 z" fill={C.break_c} />
         </marker>
         <marker id="bcPurp" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
-          <path d="M0,0 L0,7 L7,3.5 z" fill={C.cont_c}/>
+          <path d="M0,0 L0,7 L7,3.5 z" fill={C.cont_c} />
         </marker>
         <marker id="bcGreen" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
-          <path d="M0,0 L0,7 L7,3.5 z" fill={C.else_c}/>
+          <path d="M0,0 L0,7 L7,3.5 z" fill={C.else_c} />
         </marker>
       </defs>
       <g className="bc">
         {/* break */}
         <rect x="10" y="10" width="150" height="58" rx="9"
-          fill={C.break_c} fillOpacity=".1" stroke={C.break_c} strokeOpacity=".4" strokeWidth="1.5"/>
+          fill={C.break_c} fillOpacity=".1" stroke={C.break_c} strokeOpacity=".4" strokeWidth="1.5" />
         <text x="85" y="30" textAnchor="middle" fontSize="11" fontWeight="700"
           fill={C.break_c} fontFamily="Poppins,sans-serif">break</text>
         <text x="85" y="47" textAnchor="middle" fontSize="8.5" fill={C.muted}
@@ -141,7 +141,7 @@ function BreakContinueSVG() {
 
         {/* continue */}
         <rect x="185" y="10" width="150" height="58" rx="9"
-          fill={C.cont_c} fillOpacity=".1" stroke={C.cont_c} strokeOpacity=".4" strokeWidth="1.5"/>
+          fill={C.cont_c} fillOpacity=".1" stroke={C.cont_c} strokeOpacity=".4" strokeWidth="1.5" />
         <text x="260" y="30" textAnchor="middle" fontSize="11" fontWeight="700"
           fill={C.cont_c} fontFamily="Poppins,sans-serif">continue</text>
         <text x="260" y="47" textAnchor="middle" fontSize="8.5" fill={C.muted}
@@ -151,7 +151,7 @@ function BreakContinueSVG() {
 
         {/* else */}
         <rect x="360" y="10" width="152" height="58" rx="9"
-          fill={C.else_c} fillOpacity=".1" stroke={C.else_c} strokeOpacity=".4" strokeWidth="1.5"/>
+          fill={C.else_c} fillOpacity=".1" stroke={C.else_c} strokeOpacity=".4" strokeWidth="1.5" />
         <text x="436" y="30" textAnchor="middle" fontSize="11" fontWeight="700"
           fill={C.else_c} fontFamily="Poppins,sans-serif">else on loop</text>
         <text x="436" y="47" textAnchor="middle" fontSize="8.5" fill={C.muted}
@@ -161,7 +161,7 @@ function BreakContinueSVG() {
 
         {/* Full example */}
         <rect x="10" y="82" width="502" height="60" rx="8"
-          fill={C.dim} fillOpacity=".5" stroke={C.muted} strokeOpacity=".2" strokeWidth="1"/>
+          fill={C.dim} fillOpacity=".5" stroke={C.muted} strokeOpacity=".2" strokeWidth="1" />
         <text x="20" y="100" fontSize="8.5" fontFamily="Space Mono,monospace" fill={C.muted}>
           for item in items:
         </text>
@@ -192,7 +192,7 @@ function RecallSVG() {
       </defs>
       <g className="lr0">
         <rect x="4" y="4" width="168" height="148" rx="9"
-          fill={C.for_c} fillOpacity=".09" stroke={C.for_c} strokeOpacity=".35" strokeWidth="1.5"/>
+          fill={C.for_c} fillOpacity=".09" stroke={C.for_c} strokeOpacity=".35" strokeWidth="1.5" />
         <text x="88" y="24" textAnchor="middle" fontSize="11" fontWeight="700"
           fill={C.for_c} fontFamily="Poppins,sans-serif">for loop</text>
         {['iter() + next() internally', 'enumerate() for index', 'zip() for parallel', 'range() for numbers', 'for x in dict: → keys'].map((l, i) => (
@@ -202,7 +202,7 @@ function RecallSVG() {
       </g>
       <g className="lr1">
         <rect x="180" y="4" width="168" height="148" rx="9"
-          fill={C.while_c} fillOpacity=".09" stroke={C.while_c} strokeOpacity=".35" strokeWidth="1.5"/>
+          fill={C.while_c} fillOpacity=".09" stroke={C.while_c} strokeOpacity=".35" strokeWidth="1.5" />
         <text x="264" y="24" textAnchor="middle" fontSize="11" fontWeight="700"
           fill={C.while_c} fontFamily="Poppins,sans-serif">while loop</text>
         {['Condition check first', 'while True + break', 'Must change variable!', 'Infinite loop risk', 'Use for unknown count'].map((l, i) => (
@@ -212,7 +212,7 @@ function RecallSVG() {
       </g>
       <g className="lr2">
         <rect x="356" y="4" width="180" height="148" rx="9"
-          fill={C.break_c} fillOpacity=".09" stroke={C.break_c} strokeOpacity=".35" strokeWidth="1.5"/>
+          fill={C.break_c} fillOpacity=".09" stroke={C.break_c} strokeOpacity=".35" strokeWidth="1.5" />
         <text x="446" y="24" textAnchor="middle" fontSize="11" fontWeight="700"
           fill={C.break_c} fontFamily="Poppins,sans-serif">break/continue</text>
         {['break → exit loop', 'continue → skip iter', 'else on loop:', 'runs if no break', 'Search pattern'].map((l, i) => (
@@ -247,10 +247,10 @@ export default function LoopsNote() {
               </p>
               <div className="space-y-2 border-t border-highlight pt-3">
                 {[
-                  { step: 'iter(data)',    note: 'belt shuru karo — iterator banao', color: 'text-primary' },
-                  { step: 'next(it)',      note: 'agla item uthao', color: 'text-accent' },
-                  { step: 'body run',      note: 'item process karo', color: 'text-visual-2' },
-                  { step: 'StopIteration',note: 'belt khaali — loop end', color: 'text-visual-4' },
+                  { step: 'iter(data)', note: 'belt shuru karo — iterator banao', color: 'text-primary' },
+                  { step: 'next(it)', note: 'agla item uthao', color: 'text-accent' },
+                  { step: 'body run', note: 'item process karo', color: 'text-visual-2' },
+                  { step: 'StopIteration', note: 'belt khaali — loop end', color: 'text-visual-4' },
                 ].map(r => (
                   <div key={r.step} className="flex items-start gap-2">
                     <code className="font-code text-xs text-primary shrink-0 w-32">{r.step}</code>
@@ -411,13 +411,11 @@ for i in range(3):
       <SectionBlock icon="⚡" title="List Comprehension — Compact Loops">
         <div className="space-y-4">
           <CompareBlock
-            badTitle="Verbose loop"
             bad={`result = []
 for x in nums:
     if x % 2 == 0:
         result.append(x * 2)
 # multiple lines, mutable state`}
-            goodTitle="List comprehension"
             good={`result = [x * 2 for x in nums if x % 2 == 0]
 # one line, cleaner intent`}
           />
@@ -491,18 +489,18 @@ total = sum(x**2 for x in range(1000000))  # memory efficient`}
       {/* ── 7. Cheatsheet ── */}
       <SectionBlock icon="📋" title="Cheatsheet">
         <Cheatsheet items={[
-          { label: 'for x in iter:',         value: 'iterate over any iterable' },
-          { label: 'range(n)',                value: '0 to n-1 — range(start, stop, step)' },
-          { label: 'enumerate(it)',           value: '(index, value) pairs' },
-          { label: 'zip(a, b)',               value: 'parallel iteration — stops at shortest' },
-          { label: 'while cond:',             value: 'loop while condition True' },
-          { label: 'while True: ... break',   value: 'event loop / retry pattern' },
-          { label: 'break',                   value: 'exit loop immediately (else skipped)' },
-          { label: 'continue',               value: 'skip current iteration, keep looping' },
-          { label: 'for ... else:',           value: 'else runs only if no break' },
-          { label: '[x for x in it if c]',   value: 'list comprehension — transform + filter' },
-          { label: '{k:v for k,v in it}',    value: 'dict comprehension' },
-          { label: '(x for x in it)',        value: 'generator expression — lazy, no list' },
+          { label: 'for x in iter:', value: 'iterate over any iterable' },
+          { label: 'range(n)', value: '0 to n-1 — range(start, stop, step)' },
+          { label: 'enumerate(it)', value: '(index, value) pairs' },
+          { label: 'zip(a, b)', value: 'parallel iteration — stops at shortest' },
+          { label: 'while cond:', value: 'loop while condition True' },
+          { label: 'while True: ... break', value: 'event loop / retry pattern' },
+          { label: 'break', value: 'exit loop immediately (else skipped)' },
+          { label: 'continue', value: 'skip current iteration, keep looping' },
+          { label: 'for ... else:', value: 'else runs only if no break' },
+          { label: '[x for x in it if c]', value: 'list comprehension — transform + filter' },
+          { label: '{k:v for k,v in it}', value: 'dict comprehension' },
+          { label: '(x for x in it)', value: 'generator expression — lazy, no list' },
         ]} />
       </SectionBlock>
 

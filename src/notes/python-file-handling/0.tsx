@@ -13,17 +13,17 @@ import {
 } from '../../components/notes'
 
 const C = {
-  blue:   '#4F8CFF',
-  blueL:  '#93C5FD',
-  green:  '#34D399',
+  blue: '#4F8CFF',
+  blueL: '#93C5FD',
+  green: '#34D399',
   greenL: '#6EE7B7',
   orange: '#F59E0B',
-  orangeL:'#FCD34D',
+  orangeL: '#FCD34D',
   purple: '#A78BFA',
-  red:    '#F87171',
-  muted:  '#9CA3AF',
-  text:   '#E2E8F0',
-  white:  '#F8FAFC',
+  red: '#F87171',
+  muted: '#9CA3AF',
+  text: '#E2E8F0',
+  white: '#F8FAFC',
   border: '#1E3A5F',
 }
 
@@ -45,13 +45,13 @@ function FileModelSVG() {
           .fma{animation:fmArrow .5s ease both; stroke-dasharray:40}
         `}</style>
         <marker id="fm-arr" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
-          <path d="M0,0 L8,3 L0,6 Z" fill={C.muted}/>
+          <path d="M0,0 L8,3 L0,6 Z" fill={C.muted} />
         </marker>
       </defs>
 
       {/* Node: Disk */}
       <g className="fm0">
-        <rect x="10" y="10" width="100" height="72" rx="8" fill={C.orange} fillOpacity=".12" stroke={C.orange} strokeWidth="1.5"/>
+        <rect x="10" y="10" width="100" height="72" rx="8" fill={C.orange} fillOpacity=".12" stroke={C.orange} strokeWidth="1.5" />
         <text x="60" y="40" textAnchor="middle" fill={C.orange} fontSize="22">💾</text>
         <text x="60" y="58" textAnchor="middle" fill={C.orange} fontSize="12" fontWeight="700" fontFamily="Poppins,sans-serif">Disk</text>
         <text x="60" y="74" textAnchor="middle" fill={C.muted} fontSize="10" fontFamily="Open Sans,sans-serif">data.txt stored</text>
@@ -59,13 +59,13 @@ function FileModelSVG() {
 
       {/* Arrow 1 */}
       <g className="fm1">
-        <line x1="110" y1="46" x2="138" y2="46" stroke={C.muted} strokeWidth="1.5" markerEnd="url(#fm-arr)" className="fma"/>
+        <line x1="110" y1="46" x2="138" y2="46" stroke={C.muted} strokeWidth="1.5" markerEnd="url(#fm-arr)" className="fma" />
         <text x="124" y="38" textAnchor="middle" fill={C.muted} fontSize="10" fontFamily="Open Sans,sans-serif">open()</text>
       </g>
 
       {/* Node: OS */}
       <g className="fm1">
-        <rect x="140" y="10" width="100" height="72" rx="8" fill={C.purple} fillOpacity=".12" stroke={C.purple} strokeWidth="1.5"/>
+        <rect x="140" y="10" width="100" height="72" rx="8" fill={C.purple} fillOpacity=".12" stroke={C.purple} strokeWidth="1.5" />
         <text x="190" y="40" textAnchor="middle" fill={C.purple} fontSize="22">🛡️</text>
         <text x="190" y="58" textAnchor="middle" fill={C.purple} fontSize="12" fontWeight="700" fontFamily="Poppins,sans-serif">OS</text>
         <text x="190" y="74" textAnchor="middle" fill={C.muted} fontSize="10" fontFamily="Open Sans,sans-serif">permission check</text>
@@ -73,13 +73,13 @@ function FileModelSVG() {
 
       {/* Arrow 2 */}
       <g className="fm2">
-        <line x1="240" y1="46" x2="268" y2="46" stroke={C.muted} strokeWidth="1.5" markerEnd="url(#fm-arr)" className="fma"/>
+        <line x1="240" y1="46" x2="268" y2="46" stroke={C.muted} strokeWidth="1.5" markerEnd="url(#fm-arr)" className="fma" />
         <text x="254" y="38" textAnchor="middle" fill={C.muted} fontSize="10" fontFamily="Open Sans,sans-serif">fd=3</text>
       </g>
 
       {/* Node: File Descriptor */}
       <g className="fm2">
-        <rect x="270" y="10" width="110" height="72" rx="8" fill={C.green} fillOpacity=".12" stroke={C.green} strokeWidth="1.5"/>
+        <rect x="270" y="10" width="110" height="72" rx="8" fill={C.green} fillOpacity=".12" stroke={C.green} strokeWidth="1.5" />
         <text x="325" y="40" textAnchor="middle" fill={C.green} fontSize="22">🔑</text>
         <text x="325" y="58" textAnchor="middle" fill={C.green} fontSize="11" fontWeight="700" fontFamily="Poppins,sans-serif">File Descriptor</text>
         <text x="325" y="74" textAnchor="middle" fill={C.muted} fontSize="10" fontFamily="Open Sans,sans-serif">integer ID (fd=3)</text>
@@ -87,12 +87,12 @@ function FileModelSVG() {
 
       {/* Arrow 3 */}
       <g className="fm3">
-        <line x1="380" y1="46" x2="408" y2="46" stroke={C.muted} strokeWidth="1.5" markerEnd="url(#fm-arr)" className="fma"/>
+        <line x1="380" y1="46" x2="408" y2="46" stroke={C.muted} strokeWidth="1.5" markerEnd="url(#fm-arr)" className="fma" />
       </g>
 
       {/* Node: Python Object */}
       <g className="fm3">
-        <rect x="410" y="10" width="100" height="72" rx="8" fill={C.blue} fillOpacity=".12" stroke={C.blue} strokeWidth="1.5"/>
+        <rect x="410" y="10" width="100" height="72" rx="8" fill={C.blue} fillOpacity=".12" stroke={C.blue} strokeWidth="1.5" />
         <text x="460" y="40" textAnchor="middle" fill={C.blue} fontSize="22">🐍</text>
         <text x="460" y="58" textAnchor="middle" fill={C.blue} fontSize="12" fontWeight="700" fontFamily="Poppins,sans-serif">Python f</text>
         <text x="460" y="74" textAnchor="middle" fill={C.muted} fontSize="10" fontFamily="Open Sans,sans-serif">f = open(...)</text>
@@ -112,52 +112,8 @@ function FileModelSVG() {
 // S1: y=14–68 | divider: y=76 | S2: y=84–148 | arrow: y=158 | S3: y=170–205
 function SeekTellSVG() {
   const TX = 15, TW = 295, TH = 22
-  const END  = TX + TW                      // 310
-  const C5   = TX + Math.round(5/11 * TW)  // 149 — cursor at byte 5
-
-  // Helper: one state row
-  function State({
-    y, fillW, cursorX, cursorColor,
-    label, labelColor, tickLabel, tickX,
-    noteLines, noteColor, className,
-  }: {
-    y: number; fillW: number; cursorX: number; cursorColor: string
-    label: string; labelColor: string; tickLabel: string; tickX: number
-    noteLines: string[]; noteColor: string; className: string
-  }) {
-    return (
-      <g className={className}>
-        {/* Row label */}
-        <text x={TX} y={y} fill={C.muted} fontSize="10" fontFamily="Open Sans,sans-serif"
-          dangerouslySetInnerHTML={undefined}>
-          {label}
-        </text>
-        {/* Track */}
-        <rect x={TX} y={y + 6} width={TW} height={TH} rx="5"
-          fill={cursorColor} fillOpacity=".08" stroke={cursorColor} strokeOpacity=".25" strokeWidth="1"/>
-        {/* Filled zone */}
-        {fillW > 0 && (
-          <rect x={TX} y={y + 6} width={fillW} height={TH} rx="5"
-            fill={cursorColor} fillOpacity=".3"/>
-        )}
-        {/* Cursor line */}
-        <rect x={cursorX - 2} y={y + 2} width="4" height={TH + 10} rx="2" fill={cursorColor}/>
-        {/* Tick: 0 */}
-        <text x={TX} y={y + 40} textAnchor="start" fill={C.muted} fontSize="9" fontFamily="monospace">0</text>
-        {/* Tick: cursor position */}
-        <text x={tickX} y={y + 40} textAnchor="middle" fill={labelColor} fontSize="10"
-          fontWeight="700" fontFamily="Open Sans,sans-serif">{tickLabel}</text>
-        {/* Tick: 11 */}
-        <text x={END} y={y + 40} textAnchor="end" fill={C.muted} fontSize="9" fontFamily="monospace">11</text>
-        {/* Notes right side */}
-        {noteLines.map((line, i) => (
-          <text key={i} x={END + 15} y={y + 6 + (i + 1) * 16} fill={noteColor}
-            fontSize="11" fontFamily="Open Sans,sans-serif"
-            fontWeight={i === 0 ? '700' : '400'}>{line}</text>
-        ))}
-      </g>
-    )
-  }
+  const END = TX + TW                      // 310
+  const C5 = TX + Math.round(5 / 11 * TW)  // 149 — cursor at byte 5
 
   return (
     <svg viewBox="0 0 520 205" xmlns="http://www.w3.org/2000/svg" className="w-full">
@@ -171,7 +127,7 @@ function SeekTellSVG() {
           .stsk{animation:stSeek .5s .55s ease both; stroke-dasharray:240}
         `}</style>
         <marker id="st-left" markerWidth="8" markerHeight="8" refX="1" refY="3" orient="auto">
-          <path d="M8,0 L0,3 L8,6 Z" fill={C.orange}/>
+          <path d="M8,0 L0,3 L8,6 Z" fill={C.orange} />
         </marker>
       </defs>
 
@@ -181,18 +137,18 @@ function SeekTellSVG() {
           After <tspan fill={C.blue} fontFamily="monospace" fontWeight="700">f.read(5)</tspan>
         </text>
         <rect x={TX} y="20" width={TW} height={TH} rx="5"
-          fill={C.blue} fillOpacity=".08" stroke={C.blue} strokeOpacity=".25" strokeWidth="1"/>
-        <rect x={TX} y="20" width={C5 - TX} height={TH} rx="5" fill={C.blue} fillOpacity=".35"/>
-        <rect x={C5 - 2} y="16" width="4" height={TH + 10} rx="2" fill={C.green}/>
-        <text x={TX}  y="56" textAnchor="start" fill={C.muted}  fontSize="9"  fontFamily="monospace">0</text>
-        <text x={C5}  y="56" textAnchor="middle" fill={C.green} fontSize="10" fontFamily="Open Sans,sans-serif" fontWeight="700">tell()=5</text>
-        <text x={END} y="56" textAnchor="end"   fill={C.muted}  fontSize="9"  fontFamily="monospace">11</text>
-        <text x={END + 15} y="33" fill={C.blue}  fontSize="11" fontWeight="700" fontFamily="Open Sans,sans-serif">read → "Hello"</text>
+          fill={C.blue} fillOpacity=".08" stroke={C.blue} strokeOpacity=".25" strokeWidth="1" />
+        <rect x={TX} y="20" width={C5 - TX} height={TH} rx="5" fill={C.blue} fillOpacity=".35" />
+        <rect x={C5 - 2} y="16" width="4" height={TH + 10} rx="2" fill={C.green} />
+        <text x={TX} y="56" textAnchor="start" fill={C.muted} fontSize="9" fontFamily="monospace">0</text>
+        <text x={C5} y="56" textAnchor="middle" fill={C.green} fontSize="10" fontFamily="Open Sans,sans-serif" fontWeight="700">tell()=5</text>
+        <text x={END} y="56" textAnchor="end" fill={C.muted} fontSize="9" fontFamily="monospace">11</text>
+        <text x={END + 15} y="33" fill={C.blue} fontSize="11" fontWeight="700" fontFamily="Open Sans,sans-serif">read → "Hello"</text>
         <text x={END + 15} y="48" fill={C.muted} fontSize="10" fontFamily="Open Sans,sans-serif">6 chars unread</text>
       </g>
 
       {/* ── Divider ── */}
-      <line x1={TX} y1="68" x2={END} y2="68" stroke={C.muted} strokeWidth="0.5" strokeDasharray="4 4" className="st1"/>
+      <line x1={TX} y1="68" x2={END} y2="68" stroke={C.muted} strokeWidth="0.5" strokeDasharray="4 4" className="st1" />
 
       {/* ── State 2: fully read → empty ── */}
       <g className="st1">
@@ -200,19 +156,19 @@ function SeekTellSVG() {
           After <tspan fill={C.blue} fontFamily="monospace" fontWeight="700">f.read()</tspan> (remaining)
         </text>
         <rect x={TX} y="88" width={TW} height={TH} rx="5"
-          fill={C.blue} fillOpacity=".08" stroke={C.blue} strokeOpacity=".25" strokeWidth="1"/>
-        <rect x={TX} y="88" width={TW} height={TH} rx="5" fill={C.blue} fillOpacity=".35"/>
-        <rect x={END - 2} y="84" width="4" height={TH + 10} rx="2" fill={C.red}/>
-        <text x={TX}  y="124" textAnchor="start" fill={C.muted} fontSize="9"  fontFamily="monospace">0</text>
-        <text x={END} y="124" textAnchor="end"   fill={C.red}   fontSize="10" fontFamily="Open Sans,sans-serif" fontWeight="700">tell()=11</text>
-        <text x={END + 15} y="101" fill={C.red}  fontSize="11" fontWeight="700" fontFamily="Open Sans,sans-serif">⚠️ f.read()</text>
-        <text x={END + 15} y="117" fill={C.red}  fontSize="11" fontFamily="Open Sans,sans-serif">= "" empty!</text>
+          fill={C.blue} fillOpacity=".08" stroke={C.blue} strokeOpacity=".25" strokeWidth="1" />
+        <rect x={TX} y="88" width={TW} height={TH} rx="5" fill={C.blue} fillOpacity=".35" />
+        <rect x={END - 2} y="84" width="4" height={TH + 10} rx="2" fill={C.red} />
+        <text x={TX} y="124" textAnchor="start" fill={C.muted} fontSize="9" fontFamily="monospace">0</text>
+        <text x={END} y="124" textAnchor="end" fill={C.red} fontSize="10" fontFamily="Open Sans,sans-serif" fontWeight="700">tell()=11</text>
+        <text x={END + 15} y="101" fill={C.red} fontSize="11" fontWeight="700" fontFamily="Open Sans,sans-serif">⚠️ f.read()</text>
+        <text x={END + 15} y="117" fill={C.red} fontSize="11" fontFamily="Open Sans,sans-serif">= "" empty!</text>
       </g>
 
       {/* ── seek(0) arrow ── */}
       <g className="stsk">
         <line x1={END - 5} y1="142" x2={TX + 12} y2="142"
-          stroke={C.orange} strokeWidth="2.5" markerEnd="url(#st-left)"/>
+          stroke={C.orange} strokeWidth="2.5" markerEnd="url(#st-left)" />
         <text x={(TX + END) / 2} y="137" textAnchor="middle" fill={C.orange}
           fontSize="11" fontWeight="700" fontFamily="Open Sans,sans-serif">seek(0) — cursor wapas start pe</text>
       </g>
@@ -223,10 +179,10 @@ function SeekTellSVG() {
           After <tspan fill={C.orange} fontFamily="monospace" fontWeight="700">f.seek(0)</tspan>
         </text>
         <rect x={TX} y="164" width={TW} height={TH} rx="5"
-          fill={C.green} fillOpacity=".08" stroke={C.green} strokeOpacity=".4" strokeWidth="1"/>
-        <rect x={TX - 2} y="160" width="4" height={TH + 10} rx="2" fill={C.green}/>
-        <text x={TX}  y="200" textAnchor="start" fill={C.green} fontSize="10" fontFamily="Open Sans,sans-serif" fontWeight="700">tell()=0</text>
-        <text x={END} y="200" textAnchor="end"   fill={C.muted} fontSize="9"  fontFamily="monospace">11</text>
+          fill={C.green} fillOpacity=".08" stroke={C.green} strokeOpacity=".4" strokeWidth="1" />
+        <rect x={TX - 2} y="160" width="4" height={TH + 10} rx="2" fill={C.green} />
+        <text x={TX} y="200" textAnchor="start" fill={C.green} fontSize="10" fontFamily="Open Sans,sans-serif" fontWeight="700">tell()=0</text>
+        <text x={END} y="200" textAnchor="end" fill={C.muted} fontSize="9" fontFamily="monospace">11</text>
         <text x={END + 15} y="177" fill={C.green} fontSize="11" fontWeight="700" fontFamily="Open Sans,sans-serif">✓ f.read()</text>
         <text x={END + 15} y="193" fill={C.green} fontSize="11" fontFamily="Open Sans,sans-serif">works again!</text>
       </g>
@@ -238,7 +194,7 @@ function SeekTellSVG() {
 function RecallSVG() {
   return (
     <svg viewBox="0 0 520 185" xmlns="http://www.w3.org/2000/svg" className="w-full">
-      <rect x="0" y="0" width="520" height="185" rx="10" fill="#0F172A" stroke={C.border} strokeWidth="1.5"/>
+      <rect x="0" y="0" width="520" height="185" rx="10" fill="#0F172A" stroke={C.border} strokeWidth="1.5" />
       <text x="260" y="22" textAnchor="middle" fill={C.white} fontSize="12" fontWeight="700" fontFamily="Poppins,sans-serif">Quick Recall — File I/O</text>
 
       {[
@@ -256,14 +212,14 @@ function RecallSVG() {
         },
       ].map((col) => (
         <g key={col.title}>
-          <rect x={col.x} y="32" width="155" height="140" rx="6" fill={col.color} fillOpacity=".08" stroke={col.color} strokeWidth="1.2"/>
+          <rect x={col.x} y="32" width="155" height="140" rx="6" fill={col.color} fillOpacity=".08" stroke={col.color} strokeWidth="1.2" />
           <text x={col.x + 77} y="50" textAnchor="middle" fill={col.color} fontSize="11" fontWeight="700" fontFamily="Poppins,sans-serif">{col.title}</text>
           {col.rows.map(([code, note], i) => {
             const y = 67 + i * 20
             return (
               <g key={code}>
-                {i % 2 === 0 && <rect x={col.x + 4} y={y - 13} width="147" height="17" rx="3" fill={col.color} fillOpacity=".07"/>}
-                <text x={col.x + 8}  y={y} fontSize="10" fontWeight="700" fill={col.color} fontFamily="monospace">{code}</text>
+                {i % 2 === 0 && <rect x={col.x + 4} y={y - 13} width="147" height="17" rx="3" fill={col.color} fillOpacity=".07" />}
+                <text x={col.x + 8} y={y} fontSize="10" fontWeight="700" fill={col.color} fontFamily="monospace">{code}</text>
                 <text x={col.x + 70} y={y} fontSize="10" fill={C.muted} fontFamily="Open Sans,sans-serif">{note}</text>
               </g>
             )
@@ -311,12 +267,12 @@ export default function PythonFileHandling0() {
               </thead>
               <tbody>
                 {[
-                  { mode: '"r"',  label: 'Read only',        risk: '✅ safe',   color: 'text-visual-2', note: 'File nahi mila → FileNotFoundError' },
-                  { mode: '"w"',  label: 'Write (overwrite)', risk: '💀 high',  color: 'text-error',    note: 'Existing content instantly DELETE' },
-                  { mode: '"a"',  label: 'Append',            risk: '✅ safe',   color: 'text-visual-2', note: 'End mein add karta hai, kuch delete nahi' },
-                  { mode: '"rb"', label: 'Read binary',       risk: '✅ safe',   color: 'text-visual-2', note: 'Images/PDFs ke liye — decode nahi karta' },
-                  { mode: '"wb"', label: 'Write binary',      risk: '⚠️ med',   color: 'text-warning',  note: 'Overwrites — images/files ke liye' },
-                  { mode: '"r+"', label: 'Read + write',      risk: '⚠️ med',   color: 'text-warning',  note: 'Pointer position track karo — tricky' },
+                  { mode: '"r"', label: 'Read only', risk: '✅ safe', color: 'text-visual-2', note: 'File nahi mila → FileNotFoundError' },
+                  { mode: '"w"', label: 'Write (overwrite)', risk: '💀 high', color: 'text-error', note: 'Existing content instantly DELETE' },
+                  { mode: '"a"', label: 'Append', risk: '✅ safe', color: 'text-visual-2', note: 'End mein add karta hai, kuch delete nahi' },
+                  { mode: '"rb"', label: 'Read binary', risk: '✅ safe', color: 'text-visual-2', note: 'Images/PDFs ke liye — decode nahi karta' },
+                  { mode: '"wb"', label: 'Write binary', risk: '⚠️ med', color: 'text-warning', note: 'Overwrites — images/files ke liye' },
+                  { mode: '"r+"', label: 'Read + write', risk: '⚠️ med', color: 'text-warning', note: 'Pointer position track karo — tricky' },
                 ].map(({ mode, label, risk, color, note }) => (
                   <tr key={mode} className="border-b border-highlight last:border-0 hover:bg-surface-visual transition-colors">
                     <td className="px-4 py-3 font-code text-xs text-visual-1">{mode}</td>
@@ -372,12 +328,12 @@ data = f.read()
               </thead>
               <tbody>
                 {[
-                  ['read()',        'full string',   '❌ heavy', 'Small files only'],
-                  ['read(n)',       'n chars',       '✅ safe',  'Large file — chunk processing'],
-                  ['readline()',    'one line',      '✅ safe',  'Line-by-line with position control'],
-                  ['readlines()',   'list of lines', '❌ heavy', 'Avoid on large files'],
-                  ['for line in f', 'one line',      '✅ best',  'Default choice — lazy, clean'],
-                ].map(([m, r, mem, use], i) => (
+                  ['read()', 'full string', '❌ heavy', 'Small files only'],
+                  ['read(n)', 'n chars', '✅ safe', 'Large file — chunk processing'],
+                  ['readline()', 'one line', '✅ safe', 'Line-by-line with position control'],
+                  ['readlines()', 'list of lines', '❌ heavy', 'Avoid on large files'],
+                  ['for line in f', 'one line', '✅ best', 'Default choice — lazy, clean'],
+                ].map(([m, r, mem, use]) => (
                   <tr key={m} className="border-b border-highlight last:border-0 hover:bg-surface-visual transition-colors">
                     <td className="px-4 py-3 font-code text-xs text-visual-1">{m}</td>
                     <td className="px-4 py-3 text-content">{r}</td>
@@ -509,13 +465,13 @@ def safe_write(path: str, content: str) -> None:
       {/* ── Section 9: Traps ── */}
       <SectionBlock icon="💣" title="Common Traps">
         <TrapsTable rows={[
-          { level: 'S', mistake: '"w" se log file open karna',         kyun: 'Pura purana data instantly delete — no warning',       fix: '"a" mode use karo logs ke liye' },
-          { level: 'S', mistake: 'f.read() bina f.seek(0) dobara',    kyun: 'Pointer already end pe — empty string milega',          fix: 'f.seek(0) before second read' },
-          { level: 'M', mistake: 'encoding specify nahi karna',        kyun: 'Windows cp1252 vs Linux utf-8 — production crash',     fix: 'encoding="utf-8" hamesha' },
-          { level: 'M', mistake: 'read() on 2GB file',                 kyun: 'Pura RAM mein load — server crash',                    fix: 'for line in f ya read(chunk)' },
-          { level: 'M', mistake: 'writelines() without \\n',           kyun: 'Sab lines ek mein merge — data corrupt',               fix: '"\\n".join(lines) ya line+"\\n"' },
-          { level: 'B', mistake: 'Binary file text mode mein open',   kyun: 'UTF-8 decode fail → UnicodeDecodeError',                fix: '"rb" mode use karo' },
-          { level: 'B', mistake: 'Direct overwrite bina temp file',    kyun: 'Crash → file empty, data gone',                        fix: 'Atomic write: temp + os.replace' },
+          { level: 'S', mistake: '"w" se log file open karna', kyun: 'Pura purana data instantly delete — no warning', fix: '"a" mode use karo logs ke liye' },
+          { level: 'S', mistake: 'f.read() bina f.seek(0) dobara', kyun: 'Pointer already end pe — empty string milega', fix: 'f.seek(0) before second read' },
+          { level: 'M', mistake: 'encoding specify nahi karna', kyun: 'Windows cp1252 vs Linux utf-8 — production crash', fix: 'encoding="utf-8" hamesha' },
+          { level: 'M', mistake: 'read() on 2GB file', kyun: 'Pura RAM mein load — server crash', fix: 'for line in f ya read(chunk)' },
+          { level: 'M', mistake: 'writelines() without \\n', kyun: 'Sab lines ek mein merge — data corrupt', fix: '"\\n".join(lines) ya line+"\\n"' },
+          { level: 'B', mistake: 'Binary file text mode mein open', kyun: 'UTF-8 decode fail → UnicodeDecodeError', fix: '"rb" mode use karo' },
+          { level: 'B', mistake: 'Direct overwrite bina temp file', kyun: 'Crash → file empty, data gone', fix: 'Atomic write: temp + os.replace' },
         ]} />
       </SectionBlock>
 

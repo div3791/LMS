@@ -7,7 +7,6 @@ import {
   Cheatsheet,
   QuickRecall,
   ConnectedTopics,
-  InfoBox,
   HoodBox,
 } from "../../components/notes";
 
@@ -41,24 +40,24 @@ function HashTableSVG() {
           .ht-slot{animation:htSlot 2s ease-in-out infinite}
         `}</style>
         <marker id="htArr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-          <path d="M0,0 L8,3 L0,6 Z" fill={C.orange}/>
+          <path d="M0,0 L8,3 L0,6 Z" fill={C.orange} />
         </marker>
       </defs>
       <text x="260" y="22" textAnchor="middle" fill={C.white} fontSize="13" fontWeight="700">Dict — Hash Table Internals</text>
       <text x="80" y="45" textAnchor="middle" fill={C.muted} fontSize="11">Keys</text>
       {[{ key: '"name"', y: 53 }, { key: '"age"', y: 103 }, { key: '"city"', y: 153 }].map((item) => (
         <g key={item.key} className="ht1">
-          <rect x="15" y={item.y} width="100" height="32" rx="6" fill={C.blue} fillOpacity=".15" stroke={C.blue} strokeWidth="1.5"/>
+          <rect x="15" y={item.y} width="100" height="32" rx="6" fill={C.blue} fillOpacity=".15" stroke={C.blue} strokeWidth="1.5" />
           <text x="65" y={item.y + 20} textAnchor="middle" fill={C.blueLight} fontSize="11" fontFamily="monospace">{item.key}</text>
         </g>
       ))}
       <text x="195" y="45" textAnchor="middle" fill={C.muted} fontSize="11">hash()</text>
       {[53, 103, 153].map((y) => (
         <g key={y} className="ht2">
-          <rect x="137" y={y} width="80" height="32" rx="6" fill={C.orange} fillOpacity=".15" stroke={C.orange} strokeWidth="1.2"/>
+          <rect x="137" y={y} width="80" height="32" rx="6" fill={C.orange} fillOpacity=".15" stroke={C.orange} strokeWidth="1.2" />
           <text x="177" y={y + 14} textAnchor="middle" fill={C.orangeLight} fontSize="9">-7235...</text>
           <text x="177" y={y + 27} textAnchor="middle" fill={C.muted} fontSize="9">% slots</text>
-          <line x1="117" y1={y + 16} x2="135" y2={y + 16} stroke={C.orange} strokeWidth="1.5" markerEnd="url(#htArr)"/>
+          <line x1="117" y1={y + 16} x2="135" y2={y + 16} stroke={C.orange} strokeWidth="1.5" markerEnd="url(#htArr)" />
         </g>
       ))}
       <text x="332" y="45" textAnchor="middle" fill={C.muted} fontSize="11">Hash Table (slots)</text>
@@ -75,16 +74,16 @@ function HashTableSVG() {
             fill={item.empty ? "#1e293b" : (item.color as string)}
             fillOpacity={item.empty ? 0.3 : 0.15}
             stroke={item.empty ? C.muted : (item.color as string)}
-            strokeWidth={item.empty ? 0.5 : 1.2}/>
+            strokeWidth={item.empty ? 0.5 : 1.2} />
           <text x="248" y={item.y + 15} fill={C.muted} fontSize="10">[{item.slot}]</text>
           {!item.empty && (
             <text x="270" y={item.y + 15} fill={item.color as string} fontSize="10" fontFamily="monospace">{item.key}: {item.val}</text>
           )}
         </g>
       ))}
-      <line x1="219" y1="69" x2="235" y2="166" stroke={C.blue} strokeWidth="1" strokeDasharray="3" markerEnd="url(#htArr)"/>
-      <line x1="219" y1="119" x2="235" y2="114" stroke={C.purple} strokeWidth="1" strokeDasharray="3" markerEnd="url(#htArr)"/>
-      <line x1="219" y1="169" x2="235" y2="89" stroke={C.green} strokeWidth="1" strokeDasharray="3" markerEnd="url(#htArr)"/>
+      <line x1="219" y1="69" x2="235" y2="166" stroke={C.blue} strokeWidth="1" strokeDasharray="3" markerEnd="url(#htArr)" />
+      <line x1="219" y1="119" x2="235" y2="114" stroke={C.purple} strokeWidth="1" strokeDasharray="3" markerEnd="url(#htArr)" />
+      <line x1="219" y1="169" x2="235" y2="89" stroke={C.green} strokeWidth="1" strokeDasharray="3" markerEnd="url(#htArr)" />
       <text x="260" y="230" textAnchor="middle" fill={C.orange} fontSize="10">O(1) lookup: hash(key) → slot index → compare key → value</text>
     </svg>
   );
@@ -100,7 +99,7 @@ function DictViewsSVG() {
         `}</style>
       </defs>
       <text x="260" y="22" textAnchor="middle" fill={C.white} fontSize="13" fontWeight="700">Dict Views — Live Window into Dict</text>
-      <rect x="15" y="30" width="125" height="125" rx="8" fill={C.purple} fillOpacity=".08" stroke={C.purple} strokeWidth="1.5"/>
+      <rect x="15" y="30" width="125" height="125" rx="8" fill={C.purple} fillOpacity=".08" stroke={C.purple} strokeWidth="1.5" />
       <text x="77" y="50" textAnchor="middle" fill={C.purpleLight} fontSize="11" fontWeight="700">dict d</text>
       <text x="77" y="68" textAnchor="middle" fill={C.text} fontSize="10">"a": 1</text>
       <text x="77" y="84" textAnchor="middle" fill={C.text} fontSize="10">"b": 2</text>
@@ -112,10 +111,10 @@ function DictViewsSVG() {
         { x: 388, color: C.orange, title: "d.items()", desc: "dict_items([('a',1)...])" },
       ].map((item) => (
         <g key={item.title} className="dv-update">
-          <rect x={item.x - 60} y="30" width="120" height="125" rx="8" fill={item.color} fillOpacity=".08" stroke={item.color} strokeWidth="1.5"/>
+          <rect x={item.x - 60} y="30" width="120" height="125" rx="8" fill={item.color} fillOpacity=".08" stroke={item.color} strokeWidth="1.5" />
           <text x={item.x} y="50" textAnchor="middle" fill={item.color} fontSize="10" fontWeight="700">{item.title}</text>
           <text x={item.x - 55} y="70" fill={C.text} fontSize="8.5" fontFamily="monospace">{item.desc}</text>
-          <rect x={item.x - 50} y="82" width="95" height="20" rx="4" fill={item.color} fillOpacity=".2"/>
+          <rect x={item.x - 50} y="82" width="95" height="20" rx="4" fill={item.color} fillOpacity=".2" />
           <text x={item.x} y="96" textAnchor="middle" fill={item.color} fontSize="10">Live view!</text>
           <text x={item.x - 55} y="135" fill={C.muted} fontSize="9">Not a copy.</text>
           <text x={item.x - 55} y="148" fill={C.muted} fontSize="9">View object.</text>
@@ -128,7 +127,7 @@ function DictViewsSVG() {
 function RecallSVG() {
   return (
     <svg viewBox="0 0 520 155" xmlns="http://www.w3.org/2000/svg" className="w-full">
-      <rect x="0" y="0" width="520" height="155" rx="10" fill="#0f172a" stroke={C.border} strokeWidth="1.5"/>
+      <rect x="0" y="0" width="520" height="155" rx="10" fill="#0f172a" stroke={C.border} strokeWidth="1.5" />
       <text x="260" y="22" textAnchor="middle" fill={C.white} fontSize="12" fontWeight="700">Quick Recall — Dicts</text>
       {[
         { x: 15, color: C.orange, title: "Hash Table", lines: ["O(1) avg lookup", "Keys must be hashable", "Collision → probing"] },
@@ -136,7 +135,7 @@ function RecallSVG() {
         { x: 355, color: C.green, title: "Patterns", lines: ["get() over []", "setdefault() for groups", "Counter: d[k] = d.get(k,0)+1"] },
       ].map((col) => (
         <g key={col.title}>
-          <rect x={col.x} y="32" width="155" height="110" rx="6" fill={col.color} fillOpacity=".08" stroke={col.color} strokeWidth="1.2"/>
+          <rect x={col.x} y="32" width="155" height="110" rx="6" fill={col.color} fillOpacity=".08" stroke={col.color} strokeWidth="1.2" />
           <text x={col.x + 77} y="50" textAnchor="middle" fill={col.color} fontSize="11" fontWeight="700">{col.title}</text>
           {col.lines.map((l, j) => (
             <text key={j} x={col.x + 10} y={68 + j * 22} fill={C.text} fontSize="10">{`→ ${l}`}</text>

@@ -8,23 +8,22 @@ import {
   Cheatsheet,
   QuickRecall,
   ConnectedTopics,
-  InfoBox,
 } from '../../components/notes'
 
 const C = {
-  blue:   '#4F8CFF',
-  blueL:  '#93C5FD',
-  green:  '#34D399',
+  blue: '#4F8CFF',
+  blueL: '#93C5FD',
+  green: '#34D399',
   greenL: '#6EE7B7',
   orange: '#F59E0B',
-  orangeL:'#FCD34D',
+  orangeL: '#FCD34D',
   purple: '#A78BFA',
-  red:    '#F87171',
-  muted:  '#9CA3AF',
-  text:   '#E2E8F0',
-  white:  '#F8FAFC',
+  red: '#F87171',
+  muted: '#9CA3AF',
+  text: '#E2E8F0',
+  white: '#F8FAFC',
   border: '#1E3A5F',
-  dark:   '#0F172A',
+  dark: '#0F172A',
 }
 
 // ─── SVG 1: JSON functions map ────────────────────────────────────────────────
@@ -42,7 +41,7 @@ function JSONFuncsSVG() {
           .jfa{animation:jfArrow .4s .1s ease both; stroke-dasharray:60}
         `}</style>
         <marker id="jf-r" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto">
-          <path d="M0,0 L7,3 L0,6 Z" fill={C.blue}/>
+          <path d="M0,0 L7,3 L0,6 Z" fill={C.blue} />
         </marker>
       </defs>
 
@@ -51,14 +50,14 @@ function JSONFuncsSVG() {
       </text>
 
       {/* Python Object (center source) */}
-      <rect x="185" y="28" width="150" height="44" rx="8" fill={C.purple} fillOpacity=".15" stroke={C.purple} strokeWidth="1.5"/>
+      <rect x="185" y="28" width="150" height="44" rx="8" fill={C.purple} fillOpacity=".15" stroke={C.purple} strokeWidth="1.5" />
       <text x="260" y="47" textAnchor="middle" fill={C.purple} fontSize="12" fontWeight="700" fontFamily="Poppins,sans-serif">Python Object</text>
       <text x="260" y="63" textAnchor="middle" fill={C.muted} fontSize="10" fontFamily="monospace">{'{"name": "Divyesh"}'}</text>
 
       {/* dumps → string */}
       <g className="jf0">
-        <line x1="185" y1="50" x2="120" y2="95" stroke={C.blue} strokeWidth="1.5" markerEnd="url(#jf-r)" className="jfa"/>
-        <rect x="10" y="100" width="200" height="56" rx="8" fill={C.blue} fillOpacity=".1" stroke={C.blue} strokeWidth="1.5"/>
+        <line x1="185" y1="50" x2="120" y2="95" stroke={C.blue} strokeWidth="1.5" markerEnd="url(#jf-r)" className="jfa" />
+        <rect x="10" y="100" width="200" height="56" rx="8" fill={C.blue} fillOpacity=".1" stroke={C.blue} strokeWidth="1.5" />
         <text x="110" y="122" textAnchor="middle" fill={C.blue} fontSize="13" fontWeight="800" fontFamily="Poppins,sans-serif">json.dumps()</text>
         <text x="110" y="140" textAnchor="middle" fill={C.blueL} fontSize="10" fontFamily="Open Sans,sans-serif">Python → JSON string (memory)</text>
         <text x="110" y="153" textAnchor="middle" fill={C.muted} fontSize="10" fontFamily="Open Sans,sans-serif">API response banane ke liye</text>
@@ -66,8 +65,8 @@ function JSONFuncsSVG() {
 
       {/* dump → file */}
       <g className="jf1">
-        <line x1="335" y1="50" x2="400" y2="95" stroke={C.blue} strokeWidth="1.5" markerEnd="url(#jf-r)" className="jfa"/>
-        <rect x="310" y="100" width="200" height="56" rx="8" fill={C.blue} fillOpacity=".1" stroke={C.blue} strokeWidth="1.5"/>
+        <line x1="335" y1="50" x2="400" y2="95" stroke={C.blue} strokeWidth="1.5" markerEnd="url(#jf-r)" className="jfa" />
+        <rect x="310" y="100" width="200" height="56" rx="8" fill={C.blue} fillOpacity=".1" stroke={C.blue} strokeWidth="1.5" />
         <text x="410" y="122" textAnchor="middle" fill={C.blue} fontSize="13" fontWeight="800" fontFamily="Poppins,sans-serif">json.dump()</text>
         <text x="410" y="140" textAnchor="middle" fill={C.blueL} fontSize="10" fontFamily="Open Sans,sans-serif">Python → JSON file (disk)</text>
         <text x="410" y="153" textAnchor="middle" fill={C.muted} fontSize="10" fontFamily="Open Sans,sans-serif">Config/data save karne ke liye</text>
@@ -75,7 +74,7 @@ function JSONFuncsSVG() {
 
       {/* loads ← string */}
       <g className="jf2">
-        <rect x="10" y="170" width="200" height="56" rx="8" fill={C.green} fillOpacity=".1" stroke={C.green} strokeWidth="1.5"/>
+        <rect x="10" y="170" width="200" height="56" rx="8" fill={C.green} fillOpacity=".1" stroke={C.green} strokeWidth="1.5" />
         <text x="110" y="192" textAnchor="middle" fill={C.green} fontSize="13" fontWeight="800" fontFamily="Poppins,sans-serif">json.loads()</text>
         <text x="110" y="210" textAnchor="middle" fill={C.greenL} fontSize="10" fontFamily="Open Sans,sans-serif">JSON string → Python (memory)</text>
         <text x="110" y="223" textAnchor="middle" fill={C.muted} fontSize="10" fontFamily="Open Sans,sans-serif">API response parse karne ke liye</text>
@@ -83,7 +82,7 @@ function JSONFuncsSVG() {
 
       {/* load ← file */}
       <g className="jf3">
-        <rect x="310" y="170" width="200" height="56" rx="8" fill={C.green} fillOpacity=".1" stroke={C.green} strokeWidth="1.5"/>
+        <rect x="310" y="170" width="200" height="56" rx="8" fill={C.green} fillOpacity=".1" stroke={C.green} strokeWidth="1.5" />
         <text x="410" y="192" textAnchor="middle" fill={C.green} fontSize="13" fontWeight="800" fontFamily="Poppins,sans-serif">json.load()</text>
         <text x="410" y="210" textAnchor="middle" fill={C.greenL} fontSize="10" fontFamily="Open Sans,sans-serif">JSON file → Python (disk)</text>
         <text x="410" y="223" textAnchor="middle" fill={C.muted} fontSize="10" fontFamily="Open Sans,sans-serif">Config/data read karne ke liye</text>
@@ -96,32 +95,32 @@ function JSONFuncsSVG() {
 function RecallSVG() {
   return (
     <svg viewBox="0 0 520 175" xmlns="http://www.w3.org/2000/svg" className="w-full">
-      <rect x="0" y="0" width="520" height="175" rx="10" fill={C.dark} stroke={C.border} strokeWidth="1.5"/>
+      <rect x="0" y="0" width="520" height="175" rx="10" fill={C.dark} stroke={C.border} strokeWidth="1.5" />
       <text x="260" y="22" textAnchor="middle" fill={C.white} fontSize="12" fontWeight="700" fontFamily="Poppins,sans-serif">Quick Recall — JSON</text>
 
       {[
         {
           x: 12, color: C.blue, title: 'dumps / dump',
-          rows: [['dumps(obj)','→ string (memory)'],['dump(obj,f)','→ file (disk)'],['indent=2','pretty print'],['ensure_ascii=F','Hindi names ok'],['sort_keys=T','sorted output']],
+          rows: [['dumps(obj)', '→ string (memory)'], ['dump(obj,f)', '→ file (disk)'], ['indent=2', 'pretty print'], ['ensure_ascii=F', 'Hindi names ok'], ['sort_keys=T', 'sorted output']],
         },
         {
           x: 182, color: C.green, title: 'loads / load',
-          rows: [['loads(str)','str → Python obj'],['load(f)','file → Python obj'],['JSONDecodeError','invalid JSON'],['try/except','always wrap'],['or []','null safety']],
+          rows: [['loads(str)', 'str → Python obj'], ['load(f)', 'file → Python obj'], ['JSONDecodeError', 'invalid JSON'], ['try/except', 'always wrap'], ['or []', 'null safety']],
         },
         {
           x: 352, color: C.orange, title: 'Rules',
-          rows: [['JSON = string','dict nahi'],['all keys = str','JSON keys string'],['null → None','JSON null = Python None'],['validate','external data'],['pydantic','prod validation']],
+          rows: [['JSON = string', 'dict nahi'], ['all keys = str', 'JSON keys string'], ['null → None', 'JSON null = Python None'], ['validate', 'external data'], ['pydantic', 'prod validation']],
         },
       ].map((col) => (
         <g key={col.title}>
-          <rect x={col.x} y="32" width="155" height="130" rx="6" fill={col.color} fillOpacity=".08" stroke={col.color} strokeWidth="1.2"/>
+          <rect x={col.x} y="32" width="155" height="130" rx="6" fill={col.color} fillOpacity=".08" stroke={col.color} strokeWidth="1.2" />
           <text x={col.x + 77} y="50" textAnchor="middle" fill={col.color} fontSize="11" fontWeight="700" fontFamily="Poppins,sans-serif">{col.title}</text>
           {col.rows.map(([code, note], i) => {
             const y = 66 + i * 19
             return (
               <g key={code}>
-                {i % 2 === 0 && <rect x={col.x + 4} y={y - 12} width="147" height="16" rx="3" fill={col.color} fillOpacity=".06"/>}
-                <text x={col.x + 8}  y={y} fontSize="9" fontWeight="700" fill={col.color} fontFamily="monospace">{code}</text>
+                {i % 2 === 0 && <rect x={col.x + 4} y={y - 12} width="147" height="16" rx="3" fill={col.color} fillOpacity=".06" />}
+                <text x={col.x + 8} y={y} fontSize="9" fontWeight="700" fill={col.color} fontFamily="monospace">{code}</text>
                 <text x={col.x + 74} y={y} fontSize="9" fill={C.muted} fontFamily="Open Sans,sans-serif">{note}</text>
               </g>
             )
@@ -169,11 +168,11 @@ export default function PythonFileHandling7() {
               </thead>
               <tbody>
                 {[
-                  ['json.dumps(obj)',  'Python obj',  'JSON string', 'API response, logging'],
-                  ['json.dump(obj, f)','Python obj',  'File (disk)', 'Config/data save karna'],
-                  ['json.loads(str)',  'JSON string', 'Python obj',  'API response parse karna'],
-                  ['json.load(f)',     'File object', 'Python obj',  'Config/data read karna'],
-                ].map(([fn, inp, out, use], i) => (
+                  ['json.dumps(obj)', 'Python obj', 'JSON string', 'API response, logging'],
+                  ['json.dump(obj, f)', 'Python obj', 'File (disk)', 'Config/data save karna'],
+                  ['json.loads(str)', 'JSON string', 'Python obj', 'API response parse karna'],
+                  ['json.load(f)', 'File object', 'Python obj', 'Config/data read karna'],
+                ].map(([fn, inp, out, use]) => (
                   <tr key={fn} className="border-b border-highlight last:border-0 hover:bg-surface-visual transition-colors">
                     <td className="px-4 py-3 font-code text-xs text-visual-1">{fn}</td>
                     <td className="px-4 py-3 text-content-muted text-xs">{inp}</td>
@@ -293,13 +292,13 @@ city = data.get("user", {}).get("address", {}).get("city", "Unknown")`} />
             </thead>
             <tbody>
               {[
-                ['Structure',    'Nested allowed',    'Flat only'],
-                ['Data types',   'int, bool, null',   'Sab string'],
-                ['Use case',     'APIs, configs',     'Tabular data, Excel'],
-                ['Human readable','Yes',              'Yes (simple)'],
-                ['Complex data', 'Yes',               'No'],
-                ['Streaming 1GB','ijson library',     'row-by-row easy'],
-              ].map(([f, j, c], i) => (
+                ['Structure', 'Nested allowed', 'Flat only'],
+                ['Data types', 'int, bool, null', 'Sab string'],
+                ['Use case', 'APIs, configs', 'Tabular data, Excel'],
+                ['Human readable', 'Yes', 'Yes (simple)'],
+                ['Complex data', 'Yes', 'No'],
+                ['Streaming 1GB', 'ijson library', 'row-by-row easy'],
+              ].map(([f, j, c]) => (
                 <tr key={f} className="border-b border-highlight last:border-0 hover:bg-surface-visual transition-colors">
                   <td className="px-4 py-3 text-content-muted">{f}</td>
                   <td className="px-4 py-3 text-visual-2">{j}</td>
@@ -354,12 +353,12 @@ order = Order(**json.loads(raw))   # validate + convert`} />
       {/* ── Section 7: Traps ── */}
       <SectionBlock icon="💣" title="Common Traps">
         <TrapsTable rows={[
-          { level: 'S', mistake: 'json.load(string) — string diya file nahi',kyun: 'load() file object maangta hai, loads() string',      fix: 'json.loads(string) use karo' },
-          { level: 'S', mistake: 'json.loads() bina try/except',             kyun: 'Invalid JSON → JSONDecodeError → server crash',      fix: 'try/except json.JSONDecodeError' },
-          { level: 'M', mistake: 'ensure_ascii=False bhoolna',               kyun: 'Hindi/Gujarati names → weird unicode escape',        fix: 'json.dumps(data, ensure_ascii=False)' },
-          { level: 'M', mistake: 'data["orders"] jab null ho sakta hai',     kyun: 'None[0] → TypeError',                                fix: 'data.get("orders") or []' },
-          { level: 'M', mistake: 'JSON mein tuple save karna',               kyun: 'Tuple → list ho jaega — type change silent',         fix: 'JSON only: str, int, float, bool, list, dict, null' },
-          { level: 'B', mistake: 'String key type assume karna',             kyun: 'JSON keys hamesha string — {"1": ...} not {1: ...}', fix: 'str keys use karo ya convert karo after load' },
+          { level: 'S', mistake: 'json.load(string) — string diya file nahi', kyun: 'load() file object maangta hai, loads() string', fix: 'json.loads(string) use karo' },
+          { level: 'S', mistake: 'json.loads() bina try/except', kyun: 'Invalid JSON → JSONDecodeError → server crash', fix: 'try/except json.JSONDecodeError' },
+          { level: 'M', mistake: 'ensure_ascii=False bhoolna', kyun: 'Hindi/Gujarati names → weird unicode escape', fix: 'json.dumps(data, ensure_ascii=False)' },
+          { level: 'M', mistake: 'data["orders"] jab null ho sakta hai', kyun: 'None[0] → TypeError', fix: 'data.get("orders") or []' },
+          { level: 'M', mistake: 'JSON mein tuple save karna', kyun: 'Tuple → list ho jaega — type change silent', fix: 'JSON only: str, int, float, bool, list, dict, null' },
+          { level: 'B', mistake: 'String key type assume karna', kyun: 'JSON keys hamesha string — {"1": ...} not {1: ...}', fix: 'str keys use karo ya convert karo after load' },
         ]} />
       </SectionBlock>
 

@@ -8,17 +8,16 @@ import {
   QuickRecall,
   ConnectedTopics,
   InfoBox,
-  StepsBlock,
 } from '../../components/notes'
 
 const C = {
-  blue:   '#4F8CFF',
-  green:  '#34D399',
+  blue: '#4F8CFF',
+  green: '#34D399',
   orange: '#F59E0B',
   purple: '#A78BFA',
-  red:    '#F87171',
-  muted:  '#9CA3AF',
-  white:  '#F8FAFC',
+  red: '#F87171',
+  muted: '#9CA3AF',
+  white: '#F8FAFC',
   border: '#1E3A5F',
 }
 
@@ -43,13 +42,13 @@ function PathMethodsSVG() {
 
       {/* ── Root path ── */}
       <g className="pma">
-        <rect x="10" y="8" width="500" height="26" rx="6" fill={C.blue} fillOpacity=".08" stroke={C.blue} strokeWidth="1.2"/>
+        <rect x="10" y="8" width="500" height="26" rx="6" fill={C.blue} fillOpacity=".08" stroke={C.blue} strokeWidth="1.2" />
         <text x="260" y="25" textAnchor="middle" fill={C.blue} fontSize="10" fontWeight="700" fontFamily="monospace">p = Path("/home/divyesh/projects/notes/app.py")</text>
       </g>
 
       {/* ── Existence checks ── */}
       <g className="pmb">
-        <rect x="10" y="44" width="240" height="50" rx="6" fill={C.green} fillOpacity=".08" stroke={C.green} strokeWidth="1.2"/>
+        <rect x="10" y="44" width="240" height="50" rx="6" fill={C.green} fillOpacity=".08" stroke={C.green} strokeWidth="1.2" />
         <text x="20" y="60" fill={C.green} fontSize="10" fontWeight="700" fontFamily="Poppins,sans-serif">Existence Checks</text>
         <text x="20" y="76" fill={C.muted} fontSize="9" fontFamily="monospace">p.exists()   → True / False</text>
         <text x="20" y="90" fill={C.muted} fontSize="9" fontFamily="monospace">p.is_file()  / p.is_dir() → bool</text>
@@ -57,7 +56,7 @@ function PathMethodsSVG() {
 
       {/* ── mkdir ── */}
       <g className="pmc">
-        <rect x="10" y="102" width="240" height="50" rx="6" fill={C.orange} fillOpacity=".08" stroke={C.orange} strokeWidth="1.2"/>
+        <rect x="10" y="102" width="240" height="50" rx="6" fill={C.orange} fillOpacity=".08" stroke={C.orange} strokeWidth="1.2" />
         <text x="20" y="118" fill={C.orange} fontSize="10" fontWeight="700" fontFamily="Poppins,sans-serif">Directory Creation</text>
         <text x="20" y="134" fill={C.muted} fontSize="9" fontFamily="monospace">p.mkdir()              → creates folder</text>
         <text x="20" y="148" fill={C.muted} fontSize="9" fontFamily="monospace">p.mkdir(parents=True)  → nested</text>
@@ -65,7 +64,7 @@ function PathMethodsSVG() {
 
       {/* ── glob ── */}
       <g className="pmd">
-        <rect x="10" y="160" width="240" height="44" rx="6" fill={C.purple} fillOpacity=".08" stroke={C.purple} strokeWidth="1.2"/>
+        <rect x="10" y="160" width="240" height="44" rx="6" fill={C.purple} fillOpacity=".08" stroke={C.purple} strokeWidth="1.2" />
         <text x="20" y="176" fill={C.purple} fontSize="10" fontWeight="700" fontFamily="Poppins,sans-serif">Pattern Matching</text>
         <text x="20" y="192" fill={C.muted} fontSize="9" fontFamily="monospace">p.glob("*.py")  /  p.rglob("*.py")</text>
         <text x="20" y="200" fill={C.muted} fontSize="8" fontFamily="Open Sans,sans-serif">rglob = recursive by default</text>
@@ -73,20 +72,20 @@ function PathMethodsSVG() {
 
       {/* ── Properties ── */}
       <g className="pme">
-        <rect x="265" y="44" width="245" height="160" rx="6" fill={C.blue} fillOpacity=".08" stroke={C.blue} strokeWidth="1.2"/>
+        <rect x="265" y="44" width="245" height="160" rx="6" fill={C.blue} fillOpacity=".08" stroke={C.blue} strokeWidth="1.2" />
         <text x="275" y="60" fill={C.blue} fontSize="10" fontWeight="700" fontFamily="Poppins,sans-serif">Path Properties (read-only, no disk)</text>
         {[
-          ['p.name',   '"app.py"',                ],
-          ['p.stem',   '"app"',                   ],
-          ['p.suffix', '".py"',                   ],
-          ['p.parent', 'Path(".../notes")',         ],
-          ['p.parts',  '("/","home",...,"app.py")',],
-          ['/ "sub"',  'join — Path / "sub"',      ],
+          ['p.name', '"app.py"',],
+          ['p.stem', '"app"',],
+          ['p.suffix', '".py"',],
+          ['p.parent', 'Path(".../notes")',],
+          ['p.parts', '("/","home",...,"app.py")',],
+          ['/ "sub"', 'join — Path / "sub"',],
         ].map(([prop, val], i) => {
           const y = 80 + i * 20
           return (
             <g key={prop}>
-              {i % 2 === 0 && <rect x="269" y={y - 13} width="237" height="17" rx="3" fill={C.blue} fillOpacity=".06"/>}
+              {i % 2 === 0 && <rect x="269" y={y - 13} width="237" height="17" rx="3" fill={C.blue} fillOpacity=".06" />}
               <text x="275" y={y} fill={C.blue} fontSize="9" fontWeight="700" fontFamily="monospace">{prop}</text>
               <text x="345" y={y} fill={C.muted} fontSize="9" fontFamily="monospace">{val}</text>
             </g>
@@ -101,7 +100,7 @@ function PathMethodsSVG() {
 function RecallSVG() {
   return (
     <svg viewBox="0 0 520 155" xmlns="http://www.w3.org/2000/svg" className="w-full">
-      <rect x="0" y="0" width="520" height="155" rx="10" fill="#0F172A" stroke={C.border} strokeWidth="1.5"/>
+      <rect x="0" y="0" width="520" height="155" rx="10" fill="#0F172A" stroke={C.border} strokeWidth="1.5" />
       <text x="260" y="22" textAnchor="middle" fill={C.white} fontSize="12" fontWeight="700" fontFamily="Poppins,sans-serif">Quick Recall — Path Methods</text>
 
       {[
@@ -119,14 +118,14 @@ function RecallSVG() {
         },
       ].map((col) => (
         <g key={col.title}>
-          <rect x={col.x} y="30" width="155" height="116" rx="6" fill={col.color} fillOpacity=".08" stroke={col.color} strokeWidth="1.2"/>
+          <rect x={col.x} y="30" width="155" height="116" rx="6" fill={col.color} fillOpacity=".08" stroke={col.color} strokeWidth="1.2" />
           <text x={col.x + 77} y="48" textAnchor="middle" fill={col.color} fontSize="11" fontWeight="700" fontFamily="Poppins,sans-serif">{col.title}</text>
           {col.rows.map(([code, note], i) => {
             const y = 65 + i * 20
             return (
               <g key={code}>
-                {i % 2 === 0 && <rect x={col.x + 4} y={y - 13} width="147" height="17" rx="3" fill={col.color} fillOpacity=".07"/>}
-                <text x={col.x + 8}  y={y} fontSize="10" fontWeight="700" fill={col.color} fontFamily="monospace">{code}</text>
+                {i % 2 === 0 && <rect x={col.x + 4} y={y - 13} width="147" height="17" rx="3" fill={col.color} fillOpacity=".07" />}
+                <text x={col.x + 8} y={y} fontSize="10" fontWeight="700" fill={col.color} fontFamily="monospace">{code}</text>
                 <text x={col.x + 90} y={y} fontSize="10" fill={C.muted} fontFamily="Open Sans,sans-serif">{note}</text>
               </g>
             )

@@ -12,17 +12,17 @@ import {
 } from '../../components/notes'
 
 const C = {
-  blue:   '#4F8CFF',
-  blueL:  '#93C5FD',
-  green:  '#34D399',
+  blue: '#4F8CFF',
+  blueL: '#93C5FD',
+  green: '#34D399',
   greenL: '#6EE7B7',
   orange: '#F59E0B',
-  orangeL:'#FCD34D',
+  orangeL: '#FCD34D',
   purple: '#A78BFA',
-  red:    '#F87171',
-  muted:  '#9CA3AF',
-  text:   '#E2E8F0',
-  white:  '#F8FAFC',
+  red: '#F87171',
+  muted: '#9CA3AF',
+  text: '#E2E8F0',
+  white: '#F8FAFC',
   border: '#1E3A5F',
 }
 
@@ -46,25 +46,25 @@ function PathAnatomySVG() {
       </text>
 
       {/* Full path display */}
-      <rect x="10" y="26" width="500" height="32" rx="6" fill={C.purple} fillOpacity=".1" stroke={C.purple} strokeWidth="1"/>
+      <rect x="10" y="26" width="500" height="32" rx="6" fill={C.purple} fillOpacity=".1" stroke={C.purple} strokeWidth="1" />
       <text x="260" y="47" textAnchor="middle" fontSize="13" fontFamily="monospace" fontWeight="700">
         <tspan fill={C.orange}>/home/divyesh/notes/</tspan><tspan fill={C.green}>app</tspan><tspan fill={C.blue}>.py</tspan>
       </text>
 
       {/* Attribute rows */}
       {[
-        { cls: 'pa0', color: C.purple, attr: 'p.parts',   val: "('/', 'home', 'divyesh', 'notes', 'app.py')" },
-        { cls: 'pa1', color: C.orange, attr: 'p.parent',  val: '/home/divyesh/notes' },
-        { cls: 'pa2', color: C.text,   attr: 'p.name',    val: 'app.py' },
-        { cls: 'pa3', color: C.green,  attr: 'p.stem',    val: 'app' },
-        { cls: 'pa4', color: C.blue,   attr: 'p.suffix',  val: '.py  ← dot included!' },
+        { cls: 'pa0', color: C.purple, attr: 'p.parts', val: "('/', 'home', 'divyesh', 'notes', 'app.py')" },
+        { cls: 'pa1', color: C.orange, attr: 'p.parent', val: '/home/divyesh/notes' },
+        { cls: 'pa2', color: C.text, attr: 'p.name', val: 'app.py' },
+        { cls: 'pa3', color: C.green, attr: 'p.stem', val: 'app' },
+        { cls: 'pa4', color: C.blue, attr: 'p.suffix', val: '.py  ← dot included!' },
       ].map((item, i) => (
         <g key={item.attr} className={item.cls}>
           <rect x="10" y={70 + i * 25} width="500" height="22" rx="3"
-            fill={item.color} fillOpacity={i % 2 === 0 ? '.06' : '.03'}/>
-          <text x="20"  y={85 + i * 25} fill={item.color} fontSize="11" fontWeight="700" fontFamily="monospace">{item.attr}</text>
-          <text x="115" y={85 + i * 25} fill={C.muted}     fontSize="11" fontFamily="monospace">→</text>
-          <text x="132" y={85 + i * 25} fill={C.text}      fontSize="11" fontFamily="monospace">{item.val}</text>
+            fill={item.color} fillOpacity={i % 2 === 0 ? '.06' : '.03'} />
+          <text x="20" y={85 + i * 25} fill={item.color} fontSize="11" fontWeight="700" fontFamily="monospace">{item.attr}</text>
+          <text x="115" y={85 + i * 25} fill={C.muted} fontSize="11" fontFamily="monospace">→</text>
+          <text x="132" y={85 + i * 25} fill={C.text} fontSize="11" fontFamily="monospace">{item.val}</text>
         </g>
       ))}
     </svg>
@@ -87,25 +87,25 @@ function AbsRelSVG() {
 
       {/* Absolute */}
       <g className="ar0">
-        <rect x="10" y="26" width="240" height="125" rx="8" fill={C.green} fillOpacity=".08" stroke={C.green} strokeWidth="1.5"/>
+        <rect x="10" y="26" width="240" height="125" rx="8" fill={C.green} fillOpacity=".08" stroke={C.green} strokeWidth="1.5" />
         <text x="130" y="46" textAnchor="middle" fill={C.green} fontSize="12" fontWeight="700" fontFamily="Poppins,sans-serif">✅ Absolute Path</text>
         <text x="130" y="63" textAnchor="middle" fill={C.muted} fontSize="10" fontFamily="monospace">"/home/divyesh/app/logs"</text>
-        <text x="22"  y="83"  fill={C.greenL} fontSize="10" fontFamily="Open Sans,sans-serif">→ Kahin se bhi chalao — same result</text>
-        <text x="22"  y="100" fill={C.greenL} fontSize="10" fontFamily="Open Sans,sans-serif">→ Docker / cron mein safe</text>
-        <text x="22"  y="117" fill={C.greenL} fontSize="10" fontFamily="Open Sans,sans-serif">→ Production recommended</text>
-        <rect x="18"  y="126" width="215" height="16" rx="4" fill={C.green} fillOpacity=".12"/>
+        <text x="22" y="83" fill={C.greenL} fontSize="10" fontFamily="Open Sans,sans-serif">→ Kahin se bhi chalao — same result</text>
+        <text x="22" y="100" fill={C.greenL} fontSize="10" fontFamily="Open Sans,sans-serif">→ Docker / cron mein safe</text>
+        <text x="22" y="117" fill={C.greenL} fontSize="10" fontFamily="Open Sans,sans-serif">→ Production recommended</text>
+        <rect x="18" y="126" width="215" height="16" rx="4" fill={C.green} fillOpacity=".12" />
         <text x="125" y="138" textAnchor="middle" fill={C.green} fontSize="10" fontFamily="monospace">Path(__file__).resolve().parent</text>
       </g>
 
       {/* Relative */}
       <g className="ar1">
-        <rect x="270" y="26" width="240" height="125" rx="8" fill={C.red} fillOpacity=".08" stroke={C.red} strokeWidth="1.5"/>
+        <rect x="270" y="26" width="240" height="125" rx="8" fill={C.red} fillOpacity=".08" stroke={C.red} strokeWidth="1.5" />
         <text x="390" y="46" textAnchor="middle" fill={C.red} fontSize="12" fontWeight="700" fontFamily="Poppins,sans-serif">⚠️ Relative Path</text>
         <text x="390" y="63" textAnchor="middle" fill={C.muted} fontSize="10" fontFamily="monospace">Path("logs/app.log")</text>
-        <text x="282" y="83"  fill={C.orangeL} fontSize="10" fontFamily="Open Sans,sans-serif">→ CWD pe depend — runtime mein alag</text>
+        <text x="282" y="83" fill={C.orangeL} fontSize="10" fontFamily="Open Sans,sans-serif">→ CWD pe depend — runtime mein alag</text>
         <text x="282" y="100" fill={C.orangeL} fontSize="10" fontFamily="Open Sans,sans-serif">→ Cron job → / se run → break</text>
         <text x="282" y="117" fill={C.orangeL} fontSize="10" fontFamily="Open Sans,sans-serif">→ Docker container → fail</text>
-        <rect x="278" y="126" width="215" height="16" rx="4" fill={C.red} fillOpacity=".08"/>
+        <rect x="278" y="126" width="215" height="16" rx="4" fill={C.red} fillOpacity=".08" />
         <text x="385" y="138" textAnchor="middle" fill={C.red} fontSize="10" fontFamily="Open Sans,sans-serif">Swiggy problem: "idhar aa" 😄</text>
       </g>
     </svg>
@@ -116,7 +116,7 @@ function AbsRelSVG() {
 function RecallSVG() {
   return (
     <svg viewBox="0 0 520 175" xmlns="http://www.w3.org/2000/svg" className="w-full">
-      <rect x="0" y="0" width="520" height="175" rx="10" fill="#0F172A" stroke={C.border} strokeWidth="1.5"/>
+      <rect x="0" y="0" width="520" height="175" rx="10" fill="#0F172A" stroke={C.border} strokeWidth="1.5" />
       <text x="260" y="22" textAnchor="middle" fill={C.white} fontSize="12" fontWeight="700" fontFamily="Poppins,sans-serif">Quick Recall — pathlib</text>
 
       {[
@@ -134,14 +134,14 @@ function RecallSVG() {
         },
       ].map((col) => (
         <g key={col.title}>
-          <rect x={col.x} y="32" width="155" height="130" rx="6" fill={col.color} fillOpacity=".08" stroke={col.color} strokeWidth="1.2"/>
+          <rect x={col.x} y="32" width="155" height="130" rx="6" fill={col.color} fillOpacity=".08" stroke={col.color} strokeWidth="1.2" />
           <text x={col.x + 77} y="50" textAnchor="middle" fill={col.color} fontSize="11" fontWeight="700" fontFamily="Poppins,sans-serif">{col.title}</text>
           {col.rows.map(([code, note], i) => {
             const y = 67 + i * 20
             return (
               <g key={code}>
-                {i % 2 === 0 && <rect x={col.x + 4} y={y - 13} width="147" height="17" rx="3" fill={col.color} fillOpacity=".06"/>}
-                <text x={col.x + 8}  y={y} fontSize="10" fontWeight="700" fill={col.color} fontFamily="monospace">{code}</text>
+                {i % 2 === 0 && <rect x={col.x + 4} y={y - 13} width="147" height="17" rx="3" fill={col.color} fillOpacity=".06" />}
+                <text x={col.x + 8} y={y} fontSize="10" fontWeight="700" fill={col.color} fontFamily="monospace">{code}</text>
                 <text x={col.x + 74} y={y} fontSize="10" fill={C.muted} fontFamily="Open Sans,sans-serif">{note}</text>
               </g>
             )
@@ -238,18 +238,18 @@ UPLOAD_DIR  = BASE_DIR / "uploads"
               </thead>
               <tbody>
                 {[
-                  ['p.exists()',                        'bool',       'True / False'],
-                  ['p.is_file() / p.is_dir()',          'bool',       'Type check'],
-                  ['p.mkdir(parents=True, exist_ok=True)', 'None',    'Safe folder create — no crash if exists'],
-                  ['p.glob("*.py")',                    'generator',  '[Path("main.py"), ...] — same folder'],
-                  ['p.rglob("*.py")',                   'generator',  'Recursive search — all subdirs'],
-                  ['p.rename(new_path)',                'Path',       'Move or rename file'],
-                  ['p.unlink()',                        'None',       'Delete file'],
-                  ['p.read_text(encoding="utf-8")',     'str',        'Quick read — small files only'],
-                  ['p.write_text(data)',                'int',        'Quick write — overwrites!'],
-                  ['p.with_suffix(".bak")',             'Path',       'Same dir, new extension'],
-                  ['p.stat().st_size',                  'int',        'File size in bytes'],
-                ].map(([m, r, ex], i) => (
+                  ['p.exists()', 'bool', 'True / False'],
+                  ['p.is_file() / p.is_dir()', 'bool', 'Type check'],
+                  ['p.mkdir(parents=True, exist_ok=True)', 'None', 'Safe folder create — no crash if exists'],
+                  ['p.glob("*.py")', 'generator', '[Path("main.py"), ...] — same folder'],
+                  ['p.rglob("*.py")', 'generator', 'Recursive search — all subdirs'],
+                  ['p.rename(new_path)', 'Path', 'Move or rename file'],
+                  ['p.unlink()', 'None', 'Delete file'],
+                  ['p.read_text(encoding="utf-8")', 'str', 'Quick read — small files only'],
+                  ['p.write_text(data)', 'int', 'Quick write — overwrites!'],
+                  ['p.with_suffix(".bak")', 'Path', 'Same dir, new extension'],
+                  ['p.stat().st_size', 'int', 'File size in bytes'],
+                ].map(([m, r, ex]) => (
                   <tr key={m} className="border-b border-highlight last:border-0 hover:bg-surface-visual transition-colors">
                     <td className="px-4 py-3 font-code text-xs text-visual-1">{m}</td>
                     <td className="px-4 py-3 text-content-muted text-xs">{r}</td>
@@ -295,14 +295,14 @@ p.rename(p.with_name("new.py"))   # same dir, new name`} />
               </thead>
               <tbody>
                 {[
-                  ['Type',           'String',              'Object — methods ke saath'],
-                  ['Join paths',     'os.path.join(a,b,c)', 'Path("a") / "b" / "c"'],
-                  ['Readability',    '😐 verbose',          '😄 clean, chainable'],
-                  ['exists/mkdir',   'os.path.exists(p)',   'p.exists()'],
-                  ['glob search',    'glob.glob()',         'p.glob("*.py")'],
-                  ['Legacy code',    '✅ common in old code', 'Prefer for new code'],
-                  ['open() compat',  'open(string_path)',   'open(Path_object) — both work'],
-                ].map(([f, osp, pl], i) => (
+                  ['Type', 'String', 'Object — methods ke saath'],
+                  ['Join paths', 'os.path.join(a,b,c)', 'Path("a") / "b" / "c"'],
+                  ['Readability', '😐 verbose', '😄 clean, chainable'],
+                  ['exists/mkdir', 'os.path.exists(p)', 'p.exists()'],
+                  ['glob search', 'glob.glob()', 'p.glob("*.py")'],
+                  ['Legacy code', '✅ common in old code', 'Prefer for new code'],
+                  ['open() compat', 'open(string_path)', 'open(Path_object) — both work'],
+                ].map(([f, osp, pl]) => (
                   <tr key={f} className="border-b border-highlight last:border-0 hover:bg-surface-visual transition-colors">
                     <td className="px-4 py-3 text-content-muted">{f}</td>
                     <td className="px-4 py-3 font-code text-xs text-content">{osp}</td>
@@ -322,11 +322,11 @@ p.rename(p.with_name("new.py"))   # same dir, new name`} />
       {/* ── Section 6: Traps ── */}
       <SectionBlock icon="💣" title="Common Traps">
         <TrapsTable rows={[
-          { level: 'M', mistake: 'p.suffix returns ".txt" nahi "txt"',      kyun: 'suffix mein dot included — filtering mein bug',      fix: 'p.suffix == ".txt" (dot ke saath)' },
-          { level: 'M', mistake: 'Relative path cron job mein',             kyun: 'Cron root (/) se run karta hai — path break',         fix: 'BASE_DIR = Path(__file__).resolve().parent' },
-          { level: 'M', mistake: 'p.parent.parent.parent chain likhna',     kyun: 'Fragile — ek folder add/remove → break',              fix: 'p.parents[2] ya BASE_DIR se rebuild' },
-          { level: 'B', mistake: 'mkdir() bina exist_ok=True',              kyun: 'Folder pehle se exist kare to FileExistsError',        fix: 'mkdir(parents=True, exist_ok=True)' },
-          { level: 'B', mistake: 'write_text() large file pe',              kyun: 'Pura string RAM mein — streaming nahi',               fix: 'open(p, "w") use karo large files ke liye' },
+          { level: 'M', mistake: 'p.suffix returns ".txt" nahi "txt"', kyun: 'suffix mein dot included — filtering mein bug', fix: 'p.suffix == ".txt" (dot ke saath)' },
+          { level: 'M', mistake: 'Relative path cron job mein', kyun: 'Cron root (/) se run karta hai — path break', fix: 'BASE_DIR = Path(__file__).resolve().parent' },
+          { level: 'M', mistake: 'p.parent.parent.parent chain likhna', kyun: 'Fragile — ek folder add/remove → break', fix: 'p.parents[2] ya BASE_DIR se rebuild' },
+          { level: 'B', mistake: 'mkdir() bina exist_ok=True', kyun: 'Folder pehle se exist kare to FileExistsError', fix: 'mkdir(parents=True, exist_ok=True)' },
+          { level: 'B', mistake: 'write_text() large file pe', kyun: 'Pura string RAM mein — streaming nahi', fix: 'open(p, "w") use karo large files ke liye' },
         ]} />
       </SectionBlock>
 

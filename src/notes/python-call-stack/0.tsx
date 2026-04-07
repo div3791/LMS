@@ -7,7 +7,6 @@ import {
   Cheatsheet,
   QuickRecall,
   ConnectedTopics,
-  InfoBox,
   HoodBox,
   CompareBlock,
 } from "../../components/notes";
@@ -51,7 +50,7 @@ function CallStackSVG() {
 
       {/* Frame 3 — top (most recent) */}
       <g className="cs3 cs-pop">
-        <rect x="15" y="50" width="210" height="55" rx="6" fill={C.orange} fillOpacity=".15" stroke={C.orange} strokeWidth="2"/>
+        <rect x="15" y="50" width="210" height="55" rx="6" fill={C.orange} fillOpacity=".15" stroke={C.orange} strokeWidth="2" />
         <text x="120" y="68" textAnchor="middle" fill={C.orangeLight} fontSize="11" fontWeight="700">factorial(1)  ← TOP</text>
         <text x="30" y="85" fill={C.muted} fontSize="9">n=1</text>
         <text x="30" y="99" fill={C.text} fontSize="9">return 1</text>
@@ -60,7 +59,7 @@ function CallStackSVG() {
 
       {/* Frame 2 */}
       <g className="cs2">
-        <rect x="15" y="112" width="210" height="55" rx="6" fill={C.blue} fillOpacity=".15" stroke={C.blue} strokeWidth="1.5"/>
+        <rect x="15" y="112" width="210" height="55" rx="6" fill={C.blue} fillOpacity=".15" stroke={C.blue} strokeWidth="1.5" />
         <text x="120" y="130" textAnchor="middle" fill={C.blueLight} fontSize="11" fontWeight="700">factorial(2)</text>
         <text x="30" y="147" fill={C.muted} fontSize="9">n=2</text>
         <text x="30" y="161" fill={C.text} fontSize="9">waiting: 2 * factorial(1)</text>
@@ -68,18 +67,18 @@ function CallStackSVG() {
 
       {/* Frame 1 */}
       <g className="cs1">
-        <rect x="15" y="174" width="210" height="55" rx="6" fill={C.purple} fillOpacity=".15" stroke={C.purple} strokeWidth="1.5"/>
+        <rect x="15" y="174" width="210" height="55" rx="6" fill={C.purple} fillOpacity=".15" stroke={C.purple} strokeWidth="1.5" />
         <text x="120" y="192" textAnchor="middle" fill={C.purpleLight} fontSize="11" fontWeight="700">factorial(3)</text>
         <text x="30" y="209" fill={C.muted} fontSize="9">n=3</text>
         <text x="30" y="223" fill={C.text} fontSize="9">waiting: 3 * factorial(2)</text>
       </g>
 
       {/* Stack base */}
-      <rect x="15" y="237" width="210" height="12" rx="3" fill={C.muted} fillOpacity=".3"/>
+      <rect x="15" y="237" width="210" height="12" rx="3" fill={C.muted} fillOpacity=".3" />
       <text x="120" y="247" textAnchor="middle" fill={C.muted} fontSize="9">Stack Base</text>
 
       {/* Frame anatomy on right */}
-      <rect x="285" y="40" width="225" height="215" rx="8" fill={C.green} fillOpacity=".06" stroke={C.green} strokeWidth="1.5"/>
+      <rect x="285" y="40" width="225" height="215" rx="8" fill={C.green} fillOpacity=".06" stroke={C.green} strokeWidth="1.5" />
       <text x="397" y="60" textAnchor="middle" fill={C.greenLight} fontSize="11" fontWeight="700">Stack Frame Contents</text>
 
       {[
@@ -89,7 +88,7 @@ function CallStackSVG() {
         { label: "Previous frame", desc: "Caller ka frame reference", color: C.green },
       ].map((item, i) => (
         <g key={item.label}>
-          <rect x="295" y={78 + i * 42} width="205" height="34" rx="5" fill={item.color} fillOpacity=".1" stroke={item.color} strokeWidth="1"/>
+          <rect x="295" y={78 + i * 42} width="205" height="34" rx="5" fill={item.color} fillOpacity=".1" stroke={item.color} strokeWidth="1" />
           <text x="305" y={93 + i * 42} fill={item.color} fontSize="10" fontWeight="700">{item.label}</text>
           <text x="305" y={107 + i * 42} fill={C.muted} fontSize="9">{item.desc}</text>
         </g>
@@ -113,10 +112,10 @@ function RecursionSVG() {
           .rec-base{animation:recBase 2s ease-in-out infinite}
         `}</style>
         <marker id="recArr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-          <path d="M0,0 L8,3 L0,6 Z" fill={C.orange}/>
+          <path d="M0,0 L8,3 L0,6 Z" fill={C.orange} />
         </marker>
         <marker id="recGrn" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-          <path d="M0,0 L8,3 L0,6 Z" fill={C.green}/>
+          <path d="M0,0 L8,3 L0,6 Z" fill={C.green} />
         </marker>
       </defs>
       <text x="260" y="18" textAnchor="middle" fill={C.white} fontSize="13" fontWeight="700">Recursion — Descent aur Ascent</text>
@@ -129,18 +128,18 @@ function RecursionSVG() {
         { x: 300, label: "factorial(2)", n: "2 * ...", color: C.orange },
       ].map((item, i) => (
         <g key={item.label}>
-          <rect x={item.x} y="28" width="90" height="40" rx="5" fill={item.color} fillOpacity=".12" stroke={item.color} strokeWidth="1.2"/>
+          <rect x={item.x} y="28" width="90" height="40" rx="5" fill={item.color} fillOpacity=".12" stroke={item.color} strokeWidth="1.2" />
           <text x={item.x + 45} y="44" textAnchor="middle" fill={item.color} fontSize="9" fontWeight="700">{item.label}</text>
           <text x={item.x + 45} y="60" textAnchor="middle" fill={C.muted} fontSize="9">{item.n}</text>
-          {i < 3 && <line x1={item.x + 90} y1="48" x2={item.x + 110} y2="48" stroke={C.orange} strokeWidth="1.5" className="rec-down" markerEnd="url(#recArr)"/>}
+          {i < 3 && <line x1={item.x + 90} y1="48" x2={item.x + 110} y2="48" stroke={C.orange} strokeWidth="1.5" className="rec-down" markerEnd="url(#recArr)" />}
         </g>
       ))}
 
       {/* Base case */}
-      <rect x="395" y="28" width="110" height="40" rx="5" fill={C.green} fillOpacity=".15" stroke={C.green} strokeWidth="2" className="rec-base"/>
+      <rect x="395" y="28" width="110" height="40" rx="5" fill={C.green} fillOpacity=".15" stroke={C.green} strokeWidth="2" className="rec-base" />
       <text x="450" y="44" textAnchor="middle" fill={C.greenLight} fontSize="9" fontWeight="700">factorial(1)</text>
       <text x="450" y="60" textAnchor="middle" fill={C.greenLight} fontSize="9">return 1 ← BASE</text>
-      <line x1="390" y1="48" x2="393" y2="48" stroke={C.orange} strokeWidth="1.5" className="rec-down" markerEnd="url(#recArr)"/>
+      <line x1="390" y1="48" x2="393" y2="48" stroke={C.orange} strokeWidth="1.5" className="rec-down" markerEnd="url(#recArr)" />
 
       <text x="260" y="90" textAnchor="middle" fill={C.muted} fontSize="11">↑ Values unwind back up</text>
 
@@ -153,9 +152,9 @@ function RecursionSVG() {
         { x: 15, val: "→ 120" },
       ].map((item, i) => (
         <g key={item.x}>
-          <rect x={item.x} y="100" width="90" height="30" rx="5" fill={C.green} fillOpacity=".1" stroke={C.green} strokeWidth="1"/>
+          <rect x={item.x} y="100" width="90" height="30" rx="5" fill={C.green} fillOpacity=".1" stroke={C.green} strokeWidth="1" />
           <text x={item.x + 45} y="119" textAnchor="middle" fill={C.greenLight} fontSize="11" fontFamily="monospace">{item.val}</text>
-          {i < 4 && <line x1={item.x} y1="115" x2={item.x - 20} y2="115" stroke={C.green} strokeWidth="1.5" className="rec-up" markerEnd="url(#recGrn)"/>}
+          {i < 4 && <line x1={item.x} y1="115" x2={item.x - 20} y2="115" stroke={C.green} strokeWidth="1.5" className="rec-up" markerEnd="url(#recGrn)" />}
         </g>
       ))}
 
@@ -168,7 +167,7 @@ function RecursionSVG() {
 function RecallSVG() {
   return (
     <svg viewBox="0 0 520 160" xmlns="http://www.w3.org/2000/svg" className="w-full">
-      <rect x="0" y="0" width="520" height="160" rx="10" fill="#0f172a" stroke={C.border} strokeWidth="1.5"/>
+      <rect x="0" y="0" width="520" height="160" rx="10" fill="#0f172a" stroke={C.border} strokeWidth="1.5" />
       <text x="260" y="22" textAnchor="middle" fill={C.white} fontSize="12" fontWeight="700">Quick Recall — Call Stack & Recursion</text>
       {[
         { x: 15, color: C.purple, title: "Call Stack", lines: ["LIFO — last in, first out", "Each call = new frame", "Frame: locals + ret addr"] },
@@ -176,7 +175,7 @@ function RecallSVG() {
         { x: 355, color: C.blue, title: "Traceback", lines: ["Bottom = original call", "Top = where error was", "RecursionError = no base"] },
       ].map((col) => (
         <g key={col.title}>
-          <rect x={col.x} y="32" width="155" height="115" rx="6" fill={col.color} fillOpacity=".08" stroke={col.color} strokeWidth="1.2"/>
+          <rect x={col.x} y="32" width="155" height="115" rx="6" fill={col.color} fillOpacity=".08" stroke={col.color} strokeWidth="1.2" />
           <text x={col.x + 77} y="50" textAnchor="middle" fill={col.color} fontSize="11" fontWeight="700">{col.title}</text>
           {col.lines.map((l, j) => (
             <text key={j} x={col.x + 10} y={68 + j * 22} fill={C.text} fontSize="10">{`→ ${l}`}</text>

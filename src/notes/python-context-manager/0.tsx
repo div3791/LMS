@@ -9,8 +9,6 @@ import {
   ConnectedTopics,
   InfoBox,
   HoodBox,
-  StepsBlock,
-  CompareBlock,
 } from "../../components/notes";
 
 const C = {
@@ -44,35 +42,35 @@ function WithFlowSVG() {
           .wf-body{animation:wfPulse 2s ease-in-out infinite}
         `}</style>
         <marker id="wfArr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-          <path d="M0,0 L8,3 L0,6 Z" fill={C.blue}/>
+          <path d="M0,0 L8,3 L0,6 Z" fill={C.blue} />
         </marker>
         <marker id="wfRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-          <path d="M0,0 L8,3 L0,6 Z" fill={C.red}/>
+          <path d="M0,0 L8,3 L0,6 Z" fill={C.red} />
         </marker>
       </defs>
       <text x="260" y="20" textAnchor="middle" fill={C.white} fontSize="13" fontWeight="700">with Statement — Execution Flow</text>
 
       {/* Step 1: __enter__ */}
-      <rect x="15" y="30" width="220" height="38" rx="7" fill={C.green} fillOpacity=".12" stroke={C.green} strokeWidth="1.5" className="wf1"/>
+      <rect x="15" y="30" width="220" height="38" rx="7" fill={C.green} fillOpacity=".12" stroke={C.green} strokeWidth="1.5" className="wf1" />
       <text x="125" y="47" textAnchor="middle" fill={C.greenLight} fontSize="11" fontWeight="700">1. cm.__enter__()</text>
       <text x="125" y="62" textAnchor="middle" fill={C.muted} fontSize="10">setup, return resource (as target)</text>
 
       {/* Step 2: body */}
-      <rect x="15" y="85" width="220" height="45" rx="7" fill={C.blue} fillOpacity=".12" stroke={C.blue} strokeWidth="1.5" className="wf-body"/>
+      <rect x="15" y="85" width="220" height="45" rx="7" fill={C.blue} fillOpacity=".12" stroke={C.blue} strokeWidth="1.5" className="wf-body" />
       <text x="125" y="102" textAnchor="middle" fill={C.blueLight} fontSize="11" fontWeight="700">2. with body runs</text>
       <text x="125" y="118" textAnchor="middle" fill={C.muted} fontSize="10">(resource available as alias)</text>
 
-      <line x1="125" y1="68" x2="125" y2="83" stroke={C.green} strokeWidth="2" markerEnd="url(#wfArr)"/>
-      <line x1="125" y1="130" x2="125" y2="143" stroke={C.blue} strokeWidth="2" markerEnd="url(#wfArr)"/>
+      <line x1="125" y1="68" x2="125" y2="83" stroke={C.green} strokeWidth="2" markerEnd="url(#wfArr)" />
+      <line x1="125" y1="130" x2="125" y2="143" stroke={C.blue} strokeWidth="2" markerEnd="url(#wfArr)" />
 
       {/* Step 3: __exit__ */}
-      <rect x="15" y="145" width="220" height="50" rx="7" fill={C.purple} fillOpacity=".12" stroke={C.purple} strokeWidth="1.5" className="wf3"/>
+      <rect x="15" y="145" width="220" height="50" rx="7" fill={C.purple} fillOpacity=".12" stroke={C.purple} strokeWidth="1.5" className="wf3" />
       <text x="125" y="162" textAnchor="middle" fill={C.purpleLight} fontSize="11" fontWeight="700">3. cm.__exit__(exc_type, exc_val, tb)</text>
       <text x="125" y="177" textAnchor="middle" fill={C.muted} fontSize="10">cleanup always runs</text>
       <text x="125" y="191" textAnchor="middle" fill={C.muted} fontSize="10">return True → suppress exception</text>
 
       {/* Exception path */}
-      <rect x="295" y="85" width="215" height="155" rx="8" fill={C.red} fillOpacity=".06" stroke={C.red} strokeWidth="1.2" className="wf4"/>
+      <rect x="295" y="85" width="215" height="155" rx="8" fill={C.red} fillOpacity=".06" stroke={C.red} strokeWidth="1.2" className="wf4" />
       <text x="402" y="108" textAnchor="middle" fill={C.redLight} fontSize="11" fontWeight="700">If Exception in body:</text>
       <text x="302" y="130" fill={C.muted} fontSize="10">• __exit__(exc_type, exc_val, tb)</text>
       <text x="302" y="148" fill={C.muted} fontSize="10">• return True → suppress</text>
@@ -80,7 +78,7 @@ function WithFlowSVG() {
       <text x="302" y="184" fill={C.green} fontSize="10">• __exit__ guaranteed to run</text>
       <text x="302" y="202" fill={C.green} fontSize="10">• even if SystemExit!</text>
 
-      <line x1="237" y1="108" x2="293" y2="108" stroke={C.red} strokeWidth="1.5" strokeDasharray="4" markerEnd="url(#wfRed)"/>
+      <line x1="237" y1="108" x2="293" y2="108" stroke={C.red} strokeWidth="1.5" strokeDasharray="4" markerEnd="url(#wfRed)" />
     </svg>
   );
 }
@@ -98,7 +96,7 @@ function ContextManagerCompareSVG() {
       <text x="260" y="18" textAnchor="middle" fill={C.white} fontSize="13" fontWeight="700">Two Ways to Make a Context Manager</text>
 
       {/* Class-based */}
-      <rect x="10" y="25" width="240" height="130" rx="8" fill={C.blue} fillOpacity=".08" stroke={C.blue} strokeWidth="1.5" className="cm1"/>
+      <rect x="10" y="25" width="240" height="130" rx="8" fill={C.blue} fillOpacity=".08" stroke={C.blue} strokeWidth="1.5" className="cm1" />
       <text x="130" y="44" textAnchor="middle" fill={C.blueLight} fontSize="11" fontWeight="700">Class-based Protocol</text>
       <text x="20" y="62" fill={C.muted} fontSize="10" fontFamily="monospace">class Timer:</text>
       <text x="20" y="78" fill={C.text} fontSize="10" fontFamily="monospace">  def __enter__(self):</text>
@@ -108,7 +106,7 @@ function ContextManagerCompareSVG() {
       <text x="20" y="147" fill={C.muted} fontSize="10">Full control, reusable, stateful</text>
 
       {/* Generator-based */}
-      <rect x="270" y="25" width="240" height="130" rx="8" fill={C.green} fillOpacity=".08" stroke={C.green} strokeWidth="1.5" className="cm2"/>
+      <rect x="270" y="25" width="240" height="130" rx="8" fill={C.green} fillOpacity=".08" stroke={C.green} strokeWidth="1.5" className="cm2" />
       <text x="390" y="44" textAnchor="middle" fill={C.greenLight} fontSize="11" fontWeight="700">@contextmanager (Generator)</text>
       <text x="280" y="62" fill={C.muted} fontSize="10" fontFamily="monospace">@contextmanager</text>
       <text x="280" y="78" fill={C.text} fontSize="10" fontFamily="monospace">def timer():</text>
@@ -123,7 +121,7 @@ function ContextManagerCompareSVG() {
 function RecallSVG() {
   return (
     <svg viewBox="0 0 520 160" xmlns="http://www.w3.org/2000/svg" className="w-full">
-      <rect x="0" y="0" width="520" height="160" rx="10" fill="#0f172a" stroke={C.border} strokeWidth="1.5"/>
+      <rect x="0" y="0" width="520" height="160" rx="10" fill="#0f172a" stroke={C.border} strokeWidth="1.5" />
       <text x="260" y="22" textAnchor="middle" fill={C.white} fontSize="12" fontWeight="700">Quick Recall — Context Manager</text>
       {[
         { x: 15, color: C.green, title: "Protocol", lines: ["__enter__ → setup + return", "__exit__(type, val, tb)", "return True → suppress exc"] },
@@ -131,7 +129,7 @@ function RecallSVG() {
         { x: 355, color: C.purple, title: "contextlib", lines: ["suppress(Exc) → ignore exc", "ExitStack → dynamic cms", "nullcontext → noop cm"] },
       ].map((col) => (
         <g key={col.title}>
-          <rect x={col.x} y="32" width="155" height="115" rx="6" fill={col.color} fillOpacity=".08" stroke={col.color} strokeWidth="1.2"/>
+          <rect x={col.x} y="32" width="155" height="115" rx="6" fill={col.color} fillOpacity=".08" stroke={col.color} strokeWidth="1.2" />
           <text x={col.x + 77} y="50" textAnchor="middle" fill={col.color} fontSize="11" fontWeight="700">{col.title}</text>
           {col.lines.map((l, j) => (
             <text key={j} x={col.x + 10} y={68 + j * 22} fill={C.text} fontSize="10">{`→ ${l}`}</text>
